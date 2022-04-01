@@ -7,23 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C78486F927F6CB4300920591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78486F827F6CB4300920591 /* AppDelegate.swift */; };
-		C78486FB27F6CB4300920591 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78486FA27F6CB4300920591 /* SceneDelegate.swift */; };
-		C78486FD27F6CB4300920591 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78486FC27F6CB4300920591 /* ViewController.swift */; };
-		C784870027F6CB4300920591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78486FE27F6CB4300920591 /* Main.storyboard */; };
-		C784870227F6CB4300920591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C784870127F6CB4300920591 /* Assets.xcassets */; };
-		C784870527F6CB4300920591 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C784870327F6CB4300920591 /* LaunchScreen.storyboard */; };
+		1EA1F9E9B13E7921196F0878 /* Pods_chajjip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2C0B5693F4E265EEC4BF0F9 /* Pods_chajjip.framework */; };
+		C784873E27F6CE5700920591 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872027F6CE5700920591 /* Constants.swift */; };
+		C784873F27F6CE5700920591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C784872127F6CE5700920591 /* Assets.xcassets */; };
+		C784874027F6CE5700920591 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872327F6CE5700920591 /* ViewController.swift */; };
+		C784874127F6CE5700920591 /* SearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872427F6CE5700920591 /* SearchResultTableViewController.swift */; };
+		C784874227F6CE5700920591 /* BarcodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872527F6CE5700920591 /* BarcodeReaderViewController.swift */; };
+		C784874327F6CE5700920591 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872627F6CE5700920591 /* SearchViewController.swift */; };
+		C784874427F6CE5700920591 /* MyReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872727F6CE5700920591 /* MyReviewViewController.swift */; };
+		C784874527F6CE5700920591 /* LoginSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872827F6CE5700920591 /* LoginSideMenuViewController.swift */; };
+		C784874627F6CE5700920591 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872927F6CE5700920591 /* MainPageViewController.swift */; };
+		C784874727F6CE5700920591 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872A27F6CE5700920591 /* LoginViewController.swift */; };
+		C784874827F6CE5700920591 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872B27F6CE5700920591 /* TabBarViewController.swift */; };
+		C784874927F6CE5700920591 /* ProfileSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872C27F6CE5700920591 /* ProfileSideViewController.swift */; };
+		C784874A27F6CE5700920591 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872D27F6CE5700920591 /* RegisterViewController.swift */; };
+		C784874B27F6CE5700920591 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872F27F6CE5700920591 /* User.swift */; };
+		C784874C27F6CE5700920591 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784873027F6CE5700920591 /* Destination.swift */; };
+		C784874D27F6CE5700920591 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784873227F6CE5700920591 /* WeatherData.swift */; };
+		C784874E27F6CE5700920591 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784873327F6CE5700920591 /* WeatherModel.swift */; };
+		C784874F27F6CE5700920591 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784873427F6CE5700920591 /* WeatherManager.swift */; };
+		C784875027F6CE5700920591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C784873627F6CE5700920591 /* Main.storyboard */; };
+		C784875127F6CE5700920591 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784873927F6CE5700920591 /* SearchResultCell.swift */; };
+		C784875227F6CE5700920591 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C784873A27F6CE5700920591 /* SearchResultCell.xib */; };
+		C784875327F6CE5700920591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784873B27F6CE5700920591 /* AppDelegate.swift */; };
+		C784875527F6CE5700920591 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784873D27F6CE5700920591 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61D3439FC28796AD6E0D576D /* Pods-chajjip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chajjip.debug.xcconfig"; path = "Target Support Files/Pods-chajjip/Pods-chajjip.debug.xcconfig"; sourceTree = "<group>"; };
+		A8DF4ADF8B0248D0B1199ACC /* Pods-chajjip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chajjip.release.xcconfig"; path = "Target Support Files/Pods-chajjip/Pods-chajjip.release.xcconfig"; sourceTree = "<group>"; };
+		C2C0B5693F4E265EEC4BF0F9 /* Pods_chajjip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chajjip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78486F527F6CB4300920591 /* chajjip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chajjip.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C78486F827F6CB4300920591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C78486FA27F6CB4300920591 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C78486FC27F6CB4300920591 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C78486FF27F6CB4300920591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C784870127F6CB4300920591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C784870427F6CB4300920591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C784870627F6CB4300920591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C784872027F6CE5700920591 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C784872127F6CE5700920591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C784872327F6CE5700920591 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C784872427F6CE5700920591 /* SearchResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewController.swift; sourceTree = "<group>"; };
+		C784872527F6CE5700920591 /* BarcodeReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeReaderViewController.swift; sourceTree = "<group>"; };
+		C784872627F6CE5700920591 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C784872727F6CE5700920591 /* MyReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReviewViewController.swift; sourceTree = "<group>"; };
+		C784872827F6CE5700920591 /* LoginSideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSideMenuViewController.swift; sourceTree = "<group>"; };
+		C784872927F6CE5700920591 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		C784872A27F6CE5700920591 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C784872B27F6CE5700920591 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		C784872C27F6CE5700920591 /* ProfileSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSideViewController.swift; sourceTree = "<group>"; };
+		C784872D27F6CE5700920591 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C784872F27F6CE5700920591 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C784873027F6CE5700920591 /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		C784873227F6CE5700920591 /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		C784873327F6CE5700920591 /* WeatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		C784873427F6CE5700920591 /* WeatherManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		C784873727F6CE5700920591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C784873927F6CE5700920591 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		C784873A27F6CE5700920591 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		C784873B27F6CE5700920591 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C784873C27F6CE5700920591 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C784873D27F6CE5700920591 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +69,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EA1F9E9B13E7921196F0878 /* Pods_chajjip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		145C2016661FD343FE1A9A74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61D3439FC28796AD6E0D576D /* Pods-chajjip.debug.xcconfig */,
+				A8DF4ADF8B0248D0B1199ACC /* Pods-chajjip.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BC9CA92EF875AF7C3F3B27F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2C0B5693F4E265EEC4BF0F9 /* Pods_chajjip.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C78486EC27F6CB4300920591 = {
 			isa = PBXGroup;
 			children = (
-				C78486F727F6CB4300920591 /* chajjip */,
+				C784871F27F6CE5700920591 /* chajjip */,
 				C78486F627F6CB4300920591 /* Products */,
+				145C2016661FD343FE1A9A74 /* Pods */,
+				BC9CA92EF875AF7C3F3B27F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,18 +111,75 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C78486F727F6CB4300920591 /* chajjip */ = {
+		C784871F27F6CE5700920591 /* chajjip */ = {
 			isa = PBXGroup;
 			children = (
-				C78486F827F6CB4300920591 /* AppDelegate.swift */,
-				C78486FA27F6CB4300920591 /* SceneDelegate.swift */,
-				C78486FC27F6CB4300920591 /* ViewController.swift */,
-				C78486FE27F6CB4300920591 /* Main.storyboard */,
-				C784870127F6CB4300920591 /* Assets.xcassets */,
-				C784870327F6CB4300920591 /* LaunchScreen.storyboard */,
-				C784870627F6CB4300920591 /* Info.plist */,
+				C784872027F6CE5700920591 /* Constants.swift */,
+				C784872127F6CE5700920591 /* Assets.xcassets */,
+				C784872227F6CE5700920591 /* Controller */,
+				C784872E27F6CE5700920591 /* Model */,
+				C784873527F6CE5700920591 /* View */,
+				C784873B27F6CE5700920591 /* AppDelegate.swift */,
+				C784873C27F6CE5700920591 /* Info.plist */,
+				C784873D27F6CE5700920591 /* SceneDelegate.swift */,
 			);
 			path = chajjip;
+			sourceTree = "<group>";
+		};
+		C784872227F6CE5700920591 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C784872327F6CE5700920591 /* ViewController.swift */,
+				C784872427F6CE5700920591 /* SearchResultTableViewController.swift */,
+				C784872527F6CE5700920591 /* BarcodeReaderViewController.swift */,
+				C784872627F6CE5700920591 /* SearchViewController.swift */,
+				C784872727F6CE5700920591 /* MyReviewViewController.swift */,
+				C784872827F6CE5700920591 /* LoginSideMenuViewController.swift */,
+				C784872C27F6CE5700920591 /* ProfileSideViewController.swift */,
+				C784872927F6CE5700920591 /* MainPageViewController.swift */,
+				C784872A27F6CE5700920591 /* LoginViewController.swift */,
+				C784872B27F6CE5700920591 /* TabBarViewController.swift */,
+				C784872D27F6CE5700920591 /* RegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C784872E27F6CE5700920591 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C784872F27F6CE5700920591 /* User.swift */,
+				C784873027F6CE5700920591 /* Destination.swift */,
+				C784873127F6CE5700920591 /* Weather */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C784873127F6CE5700920591 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				C784873227F6CE5700920591 /* WeatherData.swift */,
+				C784873327F6CE5700920591 /* WeatherModel.swift */,
+				C784873427F6CE5700920591 /* WeatherManager.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		C784873527F6CE5700920591 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C784873627F6CE5700920591 /* Main.storyboard */,
+				C784873827F6CE5700920591 /* SearchResult */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C784873827F6CE5700920591 /* SearchResult */ = {
+			isa = PBXGroup;
+			children = (
+				C784873927F6CE5700920591 /* SearchResultCell.swift */,
+				C784873A27F6CE5700920591 /* SearchResultCell.xib */,
+			);
+			path = SearchResult;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C784870927F6CB4300920591 /* Build configuration list for PBXNativeTarget "chajjip" */;
 			buildPhases = (
+				36DF2C869976F3BAE63CA25C /* [CP] Check Pods Manifest.lock */,
 				C78486F127F6CB4300920591 /* Sources */,
 				C78486F227F6CB4300920591 /* Frameworks */,
 				C78486F327F6CB4300920591 /* Resources */,
+				DE81E5A8F89EF968D904AE35 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,42 +242,93 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C784870527F6CB4300920591 /* LaunchScreen.storyboard in Resources */,
-				C784870227F6CB4300920591 /* Assets.xcassets in Resources */,
-				C784870027F6CB4300920591 /* Main.storyboard in Resources */,
+				C784873F27F6CE5700920591 /* Assets.xcassets in Resources */,
+				C784875227F6CE5700920591 /* SearchResultCell.xib in Resources */,
+				C784875027F6CE5700920591 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36DF2C869976F3BAE63CA25C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-chajjip-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE81E5A8F89EF968D904AE35 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chajjip/Pods-chajjip-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chajjip/Pods-chajjip-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chajjip/Pods-chajjip-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C78486F127F6CB4300920591 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C78486FD27F6CB4300920591 /* ViewController.swift in Sources */,
-				C78486F927F6CB4300920591 /* AppDelegate.swift in Sources */,
-				C78486FB27F6CB4300920591 /* SceneDelegate.swift in Sources */,
+				C784874B27F6CE5700920591 /* User.swift in Sources */,
+				C784874D27F6CE5700920591 /* WeatherData.swift in Sources */,
+				C784875327F6CE5700920591 /* AppDelegate.swift in Sources */,
+				C784874F27F6CE5700920591 /* WeatherManager.swift in Sources */,
+				C784874727F6CE5700920591 /* LoginViewController.swift in Sources */,
+				C784874627F6CE5700920591 /* MainPageViewController.swift in Sources */,
+				C784874327F6CE5700920591 /* SearchViewController.swift in Sources */,
+				C784874A27F6CE5700920591 /* RegisterViewController.swift in Sources */,
+				C784874027F6CE5700920591 /* ViewController.swift in Sources */,
+				C784874C27F6CE5700920591 /* Destination.swift in Sources */,
+				C784873E27F6CE5700920591 /* Constants.swift in Sources */,
+				C784874227F6CE5700920591 /* BarcodeReaderViewController.swift in Sources */,
+				C784874527F6CE5700920591 /* LoginSideMenuViewController.swift in Sources */,
+				C784874927F6CE5700920591 /* ProfileSideViewController.swift in Sources */,
+				C784874427F6CE5700920591 /* MyReviewViewController.swift in Sources */,
+				C784875527F6CE5700920591 /* SceneDelegate.swift in Sources */,
+				C784874827F6CE5700920591 /* TabBarViewController.swift in Sources */,
+				C784874E27F6CE5700920591 /* WeatherModel.swift in Sources */,
+				C784875127F6CE5700920591 /* SearchResultCell.swift in Sources */,
+				C784874127F6CE5700920591 /* SearchResultTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C78486FE27F6CB4300920591 /* Main.storyboard */ = {
+		C784873627F6CE5700920591 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C78486FF27F6CB4300920591 /* Base */,
+				C784873727F6CE5700920591 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C784870327F6CB4300920591 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C784870427F6CB4300920591 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -284,12 +452,13 @@
 		};
 		C784870A27F6CB4300920591 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61D3439FC28796AD6E0D576D /* Pods-chajjip.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SBAHW5F54N;
+				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chajjip/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -312,12 +481,13 @@
 		};
 		C784870B27F6CB4300920591 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8DF4ADF8B0248D0B1199ACC /* Pods-chajjip.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SBAHW5F54N;
+				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chajjip/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

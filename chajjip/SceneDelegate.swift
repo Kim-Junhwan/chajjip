@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  chajjip
 //
-//  Created by JunHwan Kim on 2022/04/01.
+//  Created by JunHwan Kim on 2022/03/24.
 //
 
 import UIKit
