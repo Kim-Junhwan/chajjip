@@ -18,8 +18,15 @@ class MainPageViewController : UIViewController{
     @IBOutlet weak var temperatureLabel: UILabel!
     var weatherManager = WeatherManager()
     
-    let locationManager = CLLocationManager()
+    lazy var locationManager: CLLocationManager = {
+        let manager = CLLocationManager()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        return manager
+    }()
     
+    //navermapView
+    @IBOutlet weak var naverMapView: NMFMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +36,12 @@ class MainPageViewController : UIViewController{
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
+        
+        if CLLocationManager.locationServicesEnabled(){
+            locationManager.startUpdatingLocation()
+        }
+        
+        naverMapView.positionMode = .direction
     }
     
     
@@ -59,13 +72,19 @@ extension MainPageViewController : WeatherManagerDelegate{
 extension MainPageViewController : CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last{
-            locationManager.stopUpdatingLocation()
-            let lat = location.coordinate.latitude
-            let lon = location.coordinate.longitude
-            print("lat : \(lat), lon : \(lon)")
-            weatherManager.fetchWeather(latitude: lat, longitude: lon)
-        }
+//        if let location = locations.last{
+//            locationManager.stopUpdatingLocation()
+//            let lat = location.coordinate.latitude
+//            let lon = location.coordinate.longitude
+//            print("lat : \(naverMapView.latitude), lon : \(naverMapView.longitude)")
+//            weatherManager.fetchWeather(latitude: lat, longitude: lon)
+//        }
+        let location : CLLocation = locations[locations.count - 1]
+        let longtitude : CLLocationDegrees = location.coordinate.longitude
+        let latitude : CLLocationDegrees = location.coordinate.latitude
+        print("naver : x:\(naverMapView.longitude), y:\(naverMapView.latitude)")
+        print("corelocation : x:\(longtitude), y:\(latitude)")
+        weatherManager.fetchWeather(latitude: latitude, longitude: longtitude)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

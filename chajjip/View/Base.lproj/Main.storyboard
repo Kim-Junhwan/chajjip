@@ -114,6 +114,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="conditionImageView" destination="WTL-zq-tEr" id="XuW-Oa-8t8"/>
+                        <outlet property="naverMapView" destination="Gjf-tF-dz5" id="qof-Y4-8ZJ"/>
                         <outlet property="temperatureLabel" destination="rVY-hb-HgZ" id="ROd-5l-KSj"/>
                         <outlet property="weatherView" destination="SsZ-Ux-99n" id="3gM-wY-J3S"/>
                         <segue destination="Mly-4h-zba" kind="show" identifier="loginSidebar" id="0B3-8q-I7G"/>
@@ -719,7 +720,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTC-Zb-fWh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1171.0144927536232" y="35.869565217391305"/>
+            <point key="canvasLocation" x="-2903" y="203"/>
         </scene>
         <!--홈-->
         <scene sceneID="tw7-Yy-QL8">
