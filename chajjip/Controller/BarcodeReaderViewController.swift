@@ -12,6 +12,8 @@ import AVFoundation
 class BarcodeReaderViewController: UIViewController, QRCodeReaderViewControllerDelegate {
     
     
+    
+    
     /*
     MARK: [QR 코드 스캔 필요 사항]
     1. info.plist 권한 : Privacy - Camera Usage Description
@@ -31,7 +33,8 @@ class BarcodeReaderViewController: UIViewController, QRCodeReaderViewControllerD
     
     // MARK: [액티비티 메모리 로드 수행 실시]
     override func viewDidLoad() {
-        //super.viewDidLoad()
+        super.viewDidLoad()
+        self.dismiss(animated: true, completion: nil)
         // Do any additional setup after loading the view.
         print("")
         print("===============================")
@@ -41,6 +44,7 @@ class BarcodeReaderViewController: UIViewController, QRCodeReaderViewControllerD
         
         // [카메라 권한 부여 확인 실시]
         self.checkCameraPermission()
+        
     }
     
     
@@ -156,6 +160,7 @@ class BarcodeReaderViewController: UIViewController, QRCodeReaderViewControllerD
     
     // MARK: [QRCodeReaderViewController 대리자 메소드]
     func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
+        guard let pvc = self.presentingViewController else {return}
         print("")
         print("===============================")
         print("[ViewController >> reader() :: QR 스캔 종료 실시]")
@@ -163,6 +168,13 @@ class BarcodeReaderViewController: UIViewController, QRCodeReaderViewControllerD
         print("")
         reader.stopScanning() // 스캔 중지
         self.dismiss(animated: true, completion: nil) // 카메라 팝업창 없앰
+        self.dismiss(animated: true){
+            let storyBoard : UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
+            guard let uvc = storyBoard?.instantiateViewController(identifier: "writeReview") else {return}
+            uvc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+            uvc.modalPresentationStyle = .fullScreen
+            pvc.present(uvc, animated: true, completion: nil)
+        }
     }
 
     
@@ -181,6 +193,7 @@ class BarcodeReaderViewController: UIViewController, QRCodeReaderViewControllerD
     
     // MARK: [QR 스캔 종료 실시]
     func readerDidCancel(_ reader: QRCodeReaderViewController) {
+        
         print("")
         print("===============================")
         print("[ViewController >> readerDidCancel() :: QR 스캔 취소 실시]")

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1EA1F9E9B13E7921196F0878 /* Pods_chajjip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2C0B5693F4E265EEC4BF0F9 /* Pods_chajjip.framework */; };
+		C7351E0E27FAE32D0062FD23 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7351E0D27FAE32D0062FD23 /* MoreInfoViewController.swift */; };
+		C7351E1027FB32630062FD23 /* WriteReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7351E0F27FB32630062FD23 /* WriteReviewViewController.swift */; };
 		C784873E27F6CE5700920591 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872027F6CE5700920591 /* Constants.swift */; };
 		C784873F27F6CE5700920591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C784872127F6CE5700920591 /* Assets.xcassets */; };
 		C784874027F6CE5700920591 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872327F6CE5700920591 /* ViewController.swift */; };
@@ -33,12 +35,17 @@
 		C784875527F6CE5700920591 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784873D27F6CE5700920591 /* SceneDelegate.swift */; };
 		C7AB3A6727F7542300EA8EA5 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AB3A6627F7542300EA8EA5 /* MapManager.swift */; };
 		C7AB3A6927F76AF400EA8EA5 /* MapMarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AB3A6827F76AF400EA8EA5 /* MapMarkManager.swift */; };
+		C7AB3A8C27FADC5800EA8EA5 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AB3A8B27FADC5800EA8EA5 /* DummyData.swift */; };
+		C7D1EB1E27FDF7DD00A9E747 /* RatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1EB1D27FDF7DD00A9E747 /* RatingController.swift */; };
+		C7D1EB2027FDFC0900A9E747 /* NewReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1EB1F27FDFC0900A9E747 /* NewReview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		61D3439FC28796AD6E0D576D /* Pods-chajjip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chajjip.debug.xcconfig"; path = "Target Support Files/Pods-chajjip/Pods-chajjip.debug.xcconfig"; sourceTree = "<group>"; };
 		A8DF4ADF8B0248D0B1199ACC /* Pods-chajjip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chajjip.release.xcconfig"; path = "Target Support Files/Pods-chajjip/Pods-chajjip.release.xcconfig"; sourceTree = "<group>"; };
 		C2C0B5693F4E265EEC4BF0F9 /* Pods_chajjip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chajjip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7351E0D27FAE32D0062FD23 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
+		C7351E0F27FB32630062FD23 /* WriteReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewViewController.swift; sourceTree = "<group>"; };
 		C78486F527F6CB4300920591 /* chajjip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chajjip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C784872027F6CE5700920591 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C784872127F6CE5700920591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +73,9 @@
 		C784873D27F6CE5700920591 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C7AB3A6627F7542300EA8EA5 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		C7AB3A6827F76AF400EA8EA5 /* MapMarkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarkManager.swift; sourceTree = "<group>"; };
+		C7AB3A8B27FADC5800EA8EA5 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		C7D1EB1D27FDF7DD00A9E747 /* RatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingController.swift; sourceTree = "<group>"; };
+		C7D1EB1F27FDFC0900A9E747 /* NewReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,14 +128,16 @@
 		C784871F27F6CE5700920591 /* chajjip */ = {
 			isa = PBXGroup;
 			children = (
-				C784872027F6CE5700920591 /* Constants.swift */,
-				C784872127F6CE5700920591 /* Assets.xcassets */,
-				C784872227F6CE5700920591 /* Controller */,
-				C784872E27F6CE5700920591 /* Model */,
 				C784873527F6CE5700920591 /* View */,
+				C784872E27F6CE5700920591 /* Models */,
+				C784872227F6CE5700920591 /* Controller */,
 				C784873B27F6CE5700920591 /* AppDelegate.swift */,
 				C784873C27F6CE5700920591 /* Info.plist */,
 				C784873D27F6CE5700920591 /* SceneDelegate.swift */,
+				C7AB3A8B27FADC5800EA8EA5 /* DummyData.swift */,
+				C7D1EB2127FDFCFC00A9E747 /* ViewModels */,
+				C784872027F6CE5700920591 /* Constants.swift */,
+				C784872127F6CE5700920591 /* Assets.xcassets */,
 			);
 			path = chajjip;
 			sourceTree = "<group>";
@@ -133,6 +145,7 @@
 		C784872227F6CE5700920591 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C7D1EB1C27FDF7AE00A9E747 /* Utilities */,
 				C784872327F6CE5700920591 /* ViewController.swift */,
 				C784872427F6CE5700920591 /* SearchResultTableViewController.swift */,
 				C784872527F6CE5700920591 /* BarcodeReaderViewController.swift */,
@@ -144,19 +157,22 @@
 				C784872A27F6CE5700920591 /* LoginViewController.swift */,
 				C784872B27F6CE5700920591 /* TabBarViewController.swift */,
 				C784872D27F6CE5700920591 /* RegisterViewController.swift */,
+				C7351E0D27FAE32D0062FD23 /* MoreInfoViewController.swift */,
+				C7351E0F27FB32630062FD23 /* WriteReviewViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		C784872E27F6CE5700920591 /* Model */ = {
+		C784872E27F6CE5700920591 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				C784873127F6CE5700920591 /* Weather */,
 				C7AB3A6527F7518700EA8EA5 /* Map */,
 				C784872F27F6CE5700920591 /* User.swift */,
 				C784873027F6CE5700920591 /* Destination.swift */,
+				C7D1EB1F27FDFC0900A9E747 /* NewReview.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C784873127F6CE5700920591 /* Weather */ = {
@@ -194,6 +210,21 @@
 				C7AB3A6827F76AF400EA8EA5 /* MapMarkManager.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		C7D1EB1C27FDF7AE00A9E747 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C7D1EB1D27FDF7DD00A9E747 /* RatingController.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C7D1EB2127FDFCFC00A9E747 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7351E1027FB32630062FD23 /* WriteReviewViewController.swift in Sources */,
 				C784874B27F6CE5700920591 /* User.swift in Sources */,
 				C784874D27F6CE5700920591 /* WeatherData.swift in Sources */,
 				C784875327F6CE5700920591 /* AppDelegate.swift in Sources */,
@@ -318,6 +350,7 @@
 				C7AB3A6727F7542300EA8EA5 /* MapManager.swift in Sources */,
 				C784874727F6CE5700920591 /* LoginViewController.swift in Sources */,
 				C784874627F6CE5700920591 /* MainPageViewController.swift in Sources */,
+				C7D1EB2027FDFC0900A9E747 /* NewReview.swift in Sources */,
 				C784874327F6CE5700920591 /* SearchViewController.swift in Sources */,
 				C784874A27F6CE5700920591 /* RegisterViewController.swift in Sources */,
 				C784874027F6CE5700920591 /* ViewController.swift in Sources */,
@@ -327,10 +360,13 @@
 				C784874527F6CE5700920591 /* LoginSideMenuViewController.swift in Sources */,
 				C784874927F6CE5700920591 /* ProfileSideViewController.swift in Sources */,
 				C784874427F6CE5700920591 /* MyReviewViewController.swift in Sources */,
+				C7AB3A8C27FADC5800EA8EA5 /* DummyData.swift in Sources */,
 				C784875527F6CE5700920591 /* SceneDelegate.swift in Sources */,
 				C784874827F6CE5700920591 /* TabBarViewController.swift in Sources */,
+				C7D1EB1E27FDF7DD00A9E747 /* RatingController.swift in Sources */,
 				C784874E27F6CE5700920591 /* WeatherModel.swift in Sources */,
 				C7AB3A6927F76AF400EA8EA5 /* MapMarkManager.swift in Sources */,
+				C7351E0E27FAE32D0062FD23 /* MoreInfoViewController.swift in Sources */,
 				C784875127F6CE5700920591 /* SearchResultCell.swift in Sources */,
 				C784874127F6CE5700920591 /* SearchResultTableViewController.swift in Sources */,
 			);

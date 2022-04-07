@@ -10,7 +10,8 @@ import UIKit
 class SearchResultTableViewController: UITableViewController {
     
     //dummy data
-    var searchResult = ["병천 순대국","한림대학교","강원대학교","이삭 토스트","롯데리아"]
+    var searchList = DummyData()
+    var info : TouristAndRestaurant?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +28,12 @@ class SearchResultTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return searchResult.count
+        return DummyData.places.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! SearchResultCell
-        cell.resultLabel.text = searchResult[indexPath.row]
+        cell.resultLabel.text = DummyData.places[indexPath.row].name
         return cell
     }
 
@@ -70,15 +71,17 @@ class SearchResultTableViewController: UITableViewController {
         return true
     }
     */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        info = DummyData.places[indexPath.row]
+        performSegue(withIdentifier: "showMoreInfo", sender: self)
     }
-    */
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMoreInfo"{
+            let vc = segue.destination as! MoreInfoViewController
+            vc.moreInfo = info
+        }
+    }
 
 }

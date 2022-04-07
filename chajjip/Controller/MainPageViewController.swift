@@ -30,7 +30,7 @@ class MainPageViewController : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserDefaults.standard.set(false, forKey: "status")
+        //UserDefaults.standard.set(false, forKey: "status")
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.91, green: 0.30, blue: 0.24, alpha: 1.00)
         weatherManager.delegate = self
         locationManager.delegate = self
@@ -72,19 +72,18 @@ extension MainPageViewController : WeatherManagerDelegate{
 extension MainPageViewController : CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        if let location = locations.last{
-//            locationManager.stopUpdatingLocation()
-//            let lat = location.coordinate.latitude
-//            let lon = location.coordinate.longitude
-//            print("lat : \(naverMapView.latitude), lon : \(naverMapView.longitude)")
-//            weatherManager.fetchWeather(latitude: lat, longitude: lon)
-//        }
-        let location : CLLocation = locations[locations.count - 1]
-        let longtitude : CLLocationDegrees = location.coordinate.longitude
-        let latitude : CLLocationDegrees = location.coordinate.latitude
-        print("naver : x:\(naverMapView.longitude), y:\(naverMapView.latitude)")
-        print("corelocation : x:\(longtitude), y:\(latitude)")
-        weatherManager.fetchWeather(latitude: latitude, longitude: longtitude)
+        
+//        let realtimeLocation : CLLocation = locations[locations.count - 1]
+//        let longtitude : CLLocationDegrees = realtimeLocation.coordinate.longitude
+//        let latitude : CLLocationDegrees = realtimeLocation.coordinate.latitude
+//        print("naver : x:\(naverMapView.longitude), y:\(naverMapView.latitude)")
+//        print("corelocation : x:\(longtitude), y:\(latitude)")
+        if let location = locations.last{
+            locationManager.stopUpdatingLocation()
+            let lat = location.coordinate.latitude
+            let lon = location.coordinate.longitude
+            weatherManager.fetchWeather(latitude: lat, longitude: lon)
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

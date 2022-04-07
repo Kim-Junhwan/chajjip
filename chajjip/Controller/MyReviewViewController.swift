@@ -9,10 +9,12 @@ import UIKit
 
 class MyReviewViewController: UIViewController {
 
+    @IBOutlet weak var myReviewNav: UINavigationBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        myReviewNav.isTranslucent = false
+        myReviewNav.barTintColor = .red
     }
     
     

@@ -37,7 +37,6 @@ extension LoginSideMenuViewController : UITableViewDataSource{
         return items.count
     }
     
-    
 }
 
 extension LoginSideMenuViewController : UITableViewDelegate{
