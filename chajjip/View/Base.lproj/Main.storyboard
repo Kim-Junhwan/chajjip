@@ -129,18 +129,68 @@
         <!--맛집-->
         <scene sceneID="XfP-83-ke8">
             <objects>
-                <viewController id="Xoy-v3-i8o" customClass="ViewController1" customModule="chajjip" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xoy-v3-i8o" customClass="RecommendViewController" customModule="chajjip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fJC-Xy-QnT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jV-Yw-IaQ" customClass="NMFMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jxw-mM-iGr">
+                                <rect key="frame" x="170.66666666666666" y="641" width="73" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="목록보기"/>
+                                <connections>
+                                    <action selector="clickShowBottomSheetList:" destination="Xoy-v3-i8o" eventType="touchUpInside" id="WsB-JE-q9I"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mEI-uv-BNU"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="1jV-Yw-IaQ" firstAttribute="bottom" secondItem="mEI-uv-BNU" secondAttribute="bottom" id="Eaa-UI-mho"/>
+                            <constraint firstItem="1jV-Yw-IaQ" firstAttribute="top" secondItem="mEI-uv-BNU" secondAttribute="top" id="KOL-Mx-jGZ"/>
+                            <constraint firstItem="1jV-Yw-IaQ" firstAttribute="trailing" secondItem="mEI-uv-BNU" secondAttribute="trailing" id="PRF-7e-O2J"/>
+                            <constraint firstItem="mEI-uv-BNU" firstAttribute="bottom" secondItem="Jxw-mM-iGr" secondAttribute="bottom" constant="15" id="PoC-Mi-4oN"/>
+                            <constraint firstItem="Jxw-mM-iGr" firstAttribute="centerX" secondItem="fJC-Xy-QnT" secondAttribute="centerX" id="RQE-Ea-H95"/>
+                            <constraint firstItem="1jV-Yw-IaQ" firstAttribute="leading" secondItem="mEI-uv-BNU" secondAttribute="leading" id="uTU-pB-NqY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="맛집" image="fork.knife" catalog="system" id="pcM-8A-WeS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ur6-IR-pQW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="197" y="686"/>
+            <point key="canvasLocation" x="195.6521739130435" y="685.59782608695662"/>
+        </scene>
+        <!--Recommend Bottom Sheet Table View Controller-->
+        <scene sceneID="HYf-Ip-VJU">
+            <objects>
+                <tableViewController storyboardIdentifier="recommendList" id="Eue-co-xir" customClass="RecommendBottomSheetTableViewController" customModule="chajjip" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="3fJ-Dg-llb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jPn-D4-xfE">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jPn-D4-xfE" id="doX-Sv-jYe">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Eue-co-xir" id="bJo-qc-L4M"/>
+                            <outlet property="delegate" destination="Eue-co-xir" id="4Tc-ax-pgK"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1J-pn-gOu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1279" y="996"/>
         </scene>
         <!--my 리뷰-->
         <scene sceneID="lwF-hA-i9L">
@@ -161,9 +211,20 @@
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCW-vh-B4A">
                                 <rect key="frame" x="0.0" y="44" width="414" height="130"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PiP-HF-JcX">
+                                        <rect key="frame" x="8" y="8" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="Ogw-eq-mLg"/>
+                                            <constraint firstAttribute="height" constant="120" id="rfO-oS-9Qb"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="HG4-E7-5hz"/>
+                                    <constraint firstItem="PiP-HF-JcX" firstAttribute="leading" secondItem="iCW-vh-B4A" secondAttribute="leading" constant="8" id="MAg-tQ-5lQ"/>
+                                    <constraint firstItem="PiP-HF-JcX" firstAttribute="top" secondItem="iCW-vh-B4A" secondAttribute="top" constant="8" id="lFf-AC-jrb"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jjg-F7-XVa">
@@ -207,14 +268,39 @@
         <!--관광지-->
         <scene sceneID="Pp3-HH-3oQ">
             <objects>
-                <viewController id="fTq-Wz-lby" customClass="ViewController2" customModule="chajjip" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fTq-Wz-lby" customClass="RecommendViewController" customModule="chajjip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RO6-qY-yae">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tn4-c7-ZRD" customClass="NMFMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOG-lg-1Ef">
+                                <rect key="frame" x="170.66666666666666" y="641" width="73" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="목록보기"/>
+                                <connections>
+                                    <action selector="clickShowBottomSheetList:" destination="fTq-Wz-lby" eventType="touchUpInside" id="j1E-Ns-Rxs"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="73r-gM-b05"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="73r-gM-b05" firstAttribute="bottom" secondItem="Tn4-c7-ZRD" secondAttribute="bottom" id="5bk-Iw-59t"/>
+                            <constraint firstItem="Tn4-c7-ZRD" firstAttribute="leading" secondItem="73r-gM-b05" secondAttribute="leading" id="9YQ-Iu-L1d"/>
+                            <constraint firstItem="73r-gM-b05" firstAttribute="trailing" secondItem="Tn4-c7-ZRD" secondAttribute="trailing" id="BTZ-os-My4"/>
+                            <constraint firstItem="73r-gM-b05" firstAttribute="bottom" secondItem="vOG-lg-1Ef" secondAttribute="bottom" constant="15" id="E7s-qW-Fq5"/>
+                            <constraint firstItem="vOG-lg-1Ef" firstAttribute="centerX" secondItem="RO6-qY-yae" secondAttribute="centerX" id="L5d-SJ-Tl5"/>
+                            <constraint firstItem="Tn4-c7-ZRD" firstAttribute="top" secondItem="73r-gM-b05" secondAttribute="top" id="bxY-Tc-Pbe"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="관광지" image="bag" catalog="system" id="CYZ-Is-SaZ"/>
+                    <connections>
+                        <outlet property="naverMapView" destination="Tn4-c7-ZRD" id="aqa-KP-od7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7c-6J-cqy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -485,8 +571,8 @@
                                                     <constraint firstAttribute="height" constant="1" id="QA2-Pg-HCi"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="음식사진" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xht-Ha-nK3">
-                                                <rect key="frame" x="8" y="182" width="59" height="20.333333333333343"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사진" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xht-Ha-nK3">
+                                                <rect key="frame" x="8.0000000000000018" y="182" width="29.666666666666671" height="20.333333333333343"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -596,6 +682,7 @@
                     <size key="freeformSize" width="414" height="800"/>
                     <connections>
                         <outlet property="rating" destination="mIR-Ub-A8r" id="FMc-Xp-2I1"/>
+                        <outlet property="reviewImageCollectionView" destination="j9v-84-eUf" id="Cb1-TS-e7B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grT-Hp-RcW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

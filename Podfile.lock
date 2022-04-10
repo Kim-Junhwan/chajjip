@@ -1,6 +1,35 @@
 PODS:
   - Alamofire (5.5.0)
   - BSImagePicker (3.3.1)
+  - MaterialComponents/Availability (124.2.0)
+  - MaterialComponents/BottomSheet (124.2.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/private/KeyboardWatcher
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
+  - MaterialComponents/Elevation (124.2.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (124.2.0)
+  - MaterialComponents/private/Color (124.2.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/KeyboardWatcher (124.2.0):
+    - MaterialComponents/private/Application
+  - MaterialComponents/private/Math (124.2.0)
+  - MaterialComponents/ShadowElevations (124.2.0)
+  - MaterialComponents/ShadowLayer (124.2.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/ShapeLibrary (124.2.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/Shapes
+  - MaterialComponents/Shapes (124.2.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
   - NMapsMap (3.14.2)
   - QRCodeReader.swift (10.1.0)
   - SideMenu (6.5.0)
@@ -9,6 +38,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.5)
   - BSImagePicker (~> 3.1)
+  - MaterialComponents/BottomSheet
   - NMapsMap (~> 3.14.0)
   - QRCodeReader.swift (~> 10.1.0)
   - SideMenu (~> 6.0)
@@ -18,6 +48,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - BSImagePicker
+    - MaterialComponents
     - NMapsMap
     - QRCodeReader.swift
     - SideMenu
@@ -26,11 +57,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   BSImagePicker: 0fe04b574d4d6b81093785d2af6c26227efc8428
+  MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   NMapsMap: efb3a5cf593ff0d89f2a55bb3d4f8c30fe10bd7f
   QRCodeReader.swift: 373a389fe9a22d513c879a32a6f647c58f4ef572
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 749ca8329678fda8d27659b776a40acd8abe286d
+PODFILE CHECKSUM: 14460725e1070095fb51c4be21404c64ba6b6f64
 
 COCOAPODS: 1.11.2

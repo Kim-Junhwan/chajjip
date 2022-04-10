@@ -6,6 +6,7 @@ target 'chajjip' do
   use_frameworks!
 
 pod "BSImagePicker", "~> 3.1"
+pod 'MaterialComponents/BottomSheet'
 pod 'NMapsMap','~> 3.14.0'
 pod 'Alamofire', '~> 5.5'
 pod 'SwiftyJSON', '~> 4.0'
