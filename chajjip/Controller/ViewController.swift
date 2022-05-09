@@ -41,10 +41,10 @@ class ViewController: UIViewController {
         //get destination coordinates
         for item in destination{
             let encodeAddress = item.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-            let header1 = HTTPHeader(name: "X-NCP-APIGW-API-KEY-ID", value: Constants.NAVER_CLIENT_ID)
-            let header2 = HTTPHeader(name: "X-NCP-APIGW-API-KEY", value: Constants.NAVER_CLIENT_SECRET)
+            let header1 = HTTPHeader(name: "X-NCP-APIGW-API-KEY-ID", value: NaverMapAPI.NAVER_CLIENT_ID)
+            let header2 = HTTPHeader(name: "X-NCP-APIGW-API-KEY", value: NaverMapAPI.NAVER_CLIENT_SECRET)
             let headers = HTTPHeaders([header1,header2])
-            AF.request(Constants.NAVER_GEOCODE_URL + encodeAddress, method: .get, headers: headers).validate().responseJSON{response in
+            AF.request(NaverMapAPI.NAVER_GEOCODE_URL + encodeAddress, method: .get, headers: headers).validate().responseJSON{response in
                 switch response.result {
                 case .success(let value as [String:Any]):
                     let json = JSON(value)

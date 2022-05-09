@@ -12,6 +12,7 @@ pod 'Alamofire', '~> 5.5'
 pod 'SwiftyJSON', '~> 4.0'
 pod 'SideMenu', '~> 6.0'
 pod 'QRCodeReader.swift', '~> 10.1.0'
+pod 'IQKeyboardManagerSwift'
   # Pods for chajjip
 
 end

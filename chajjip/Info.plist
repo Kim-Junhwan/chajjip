@@ -2,16 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>사용자의 갤러리에서 사진을 가져오려 합니다.</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>사용자의 건강데이터에 접근하려고 합니다.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>사용자의 건강데이터에 접근하려고 합니다.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>사용자의 카메라를 사용하려고 합니다.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>사용자의 위치를 받습니다.</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>사용자의 위치정보를 받아오려고 합니다.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>사용자의 위치정보를 받아오려고 합니다.</string>
+	<string>앱에서 카메라에 접근하려고 합니다. 허용하시겠습니까?</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>앱에서 앨범에 접근하려고 합니다. 허용하시겠습니까?</string>
 	<key>NMFClientId</key>
 	<string>nr388t370w</string>
 	<key>UIApplicationSceneManifest</key>

@@ -7,10 +7,15 @@
 
 import UIKit
 
+protocol SearchDelegate{
+    func searchResultDidSave(vm : SearchResultViewModel)
+}
+
 class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
-    
+    var delegate : SearchDelegate?
+    var searchManager = SearchManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.searchBar.delegate = self
@@ -20,23 +25,20 @@ class SearchViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension SearchViewController : UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("Search")
-        performSegue(withIdentifier: "searchResult", sender: nil)
+        print(searchBar.text!)
+        self.performSegue(withIdentifier: "searchResult", sender: nil)
+        
+//        if searchBar.text! != nil{
+//            searchManager.search(text: searchBar.text!) { vm in
+//                print("move search result page")
+//                self.delegate?.searchResultDidSave(vm: vm)
+//
+//            }
+//        }
+        
     }
 }

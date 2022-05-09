@@ -7,7 +7,7 @@
 
 import UIKit
 import CoreLocation
-
+import IQKeyboardManagerSwift
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let myColor = UIColor(red: 0.01, green: 0.29, blue: 0.38, alpha: 1.00)
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.backgroundColor = myColor
+        UINavigationBar.appearance().standardAppearance = navBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+        
+        navBarAppearance.titleTextAttributes = [.foregroundColor : UIColor.white]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor : UIColor.white]
+        UIBarButtonItem.appearance().tintColor = UIColor.white
+        
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        
         return true
     }
 

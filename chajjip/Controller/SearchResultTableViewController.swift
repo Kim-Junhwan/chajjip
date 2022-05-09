@@ -10,7 +10,7 @@ import UIKit
 class SearchResultTableViewController: UITableViewController {
     
     //dummy data
-    var searchList = DummyData()
+    var searchResultViewModel = DummyData.places
     var info : TouristAndRestaurant?
 
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class SearchResultTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return DummyData.places.count
+        return searchResultViewModel.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -84,4 +84,13 @@ class SearchResultTableViewController: UITableViewController {
         }
     }
 
+}
+
+extension SearchResultTableViewController : SearchDelegate{
+    
+    func searchResultDidSave(vm: SearchResultViewModel) {
+        print("Search View Model : \(vm)")
+    }
+    
+    
 }
