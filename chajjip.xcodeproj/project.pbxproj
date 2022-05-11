@@ -67,6 +67,9 @@
 		C7DFE70B282BD6B700E6DC25 /* MynonImageReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFE709282BD6B700E6DC25 /* MynonImageReviewTableViewCell.swift */; };
 		C7DFE70C282BD6B700E6DC25 /* MynonImageReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DFE70A282BD6B700E6DC25 /* MynonImageReviewTableViewCell.xib */; };
 		C7DFE70E282BE2E000E6DC25 /* MyReviewRatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFE70D282BE2E000E6DC25 /* MyReviewRatingController.swift */; };
+		C7DFE712282C0A2400E6DC25 /* MyReviewImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFE711282C0A2400E6DC25 /* MyReviewImageController.swift */; };
+		C7DFE716282C26E100E6DC25 /* MyReviewImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFE714282C26E100E6DC25 /* MyReviewImageCollectionViewCell.swift */; };
+		C7DFE717282C26E100E6DC25 /* MyReviewImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DFE715282C26E100E6DC25 /* MyReviewImageCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +138,9 @@
 		C7DFE709282BD6B700E6DC25 /* MynonImageReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MynonImageReviewTableViewCell.swift; sourceTree = "<group>"; };
 		C7DFE70A282BD6B700E6DC25 /* MynonImageReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MynonImageReviewTableViewCell.xib; sourceTree = "<group>"; };
 		C7DFE70D282BE2E000E6DC25 /* MyReviewRatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviewRatingController.swift; sourceTree = "<group>"; };
+		C7DFE711282C0A2400E6DC25 /* MyReviewImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviewImageController.swift; sourceTree = "<group>"; };
+		C7DFE714282C26E100E6DC25 /* MyReviewImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviewImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7DFE715282C26E100E6DC25 /* MyReviewImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyReviewImageCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +327,7 @@
 				C7D1EB1D27FDF7DD00A9E747 /* RatingController.swift */,
 				C76CC770282931DF0091CA11 /* PedoMeterManager.swift */,
 				C7DFE70D282BE2E000E6DC25 /* MyReviewRatingController.swift */,
+				C7DFE711282C0A2400E6DC25 /* MyReviewImageController.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -352,6 +359,7 @@
 		C7D1EB872801A8A600A9E747 /* UICell */ = {
 			isa = PBXGroup;
 			children = (
+				C7DFE713282C26B700E6DC25 /* MyReviewImageCollectionViewCell */,
 				C700308128281F5B00352544 /* addReviewImage */,
 				C700307C2828054100352544 /* WriteReviewImage */,
 				C784873827F6CE5700920591 /* SearchResult */,
@@ -387,6 +395,15 @@
 				C7DFE70A282BD6B700E6DC25 /* MynonImageReviewTableViewCell.xib */,
 			);
 			path = MynonImageReviewTableViewCell;
+			sourceTree = "<group>";
+		};
+		C7DFE713282C26B700E6DC25 /* MyReviewImageCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C7DFE714282C26E100E6DC25 /* MyReviewImageCollectionViewCell.swift */,
+				C7DFE715282C26E100E6DC25 /* MyReviewImageCollectionViewCell.xib */,
+			);
+			path = MyReviewImageCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +472,7 @@
 				C784873F27F6CE5700920591 /* Assets.xcassets in Resources */,
 				C7D1EB8B2801A8E300A9E747 /* MyImageReviewTableViewCell.xib in Resources */,
 				C784875227F6CE5700920591 /* SearchResultCell.xib in Resources */,
+				C7DFE717282C26E100E6DC25 /* MyReviewImageCollectionViewCell.xib in Resources */,
 				C784875027F6CE5700920591 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +533,8 @@
 				C76CC77A282B7B9A0091CA11 /* Shop.swift in Sources */,
 				C70030752826188500352544 /* CustomSideMenuNavigation.swift in Sources */,
 				C784874D27F6CE5700920591 /* WeatherData.swift in Sources */,
+				C7DFE712282C0A2400E6DC25 /* MyReviewImageController.swift in Sources */,
+				C7DFE716282C26E100E6DC25 /* MyReviewImageCollectionViewCell.swift in Sources */,
 				C784875327F6CE5700920591 /* AppDelegate.swift in Sources */,
 				C7D1EB8A2801A8E300A9E747 /* MyImageReviewTableViewCell.swift in Sources */,
 				C7DFE70B282BD6B700E6DC25 /* MynonImageReviewTableViewCell.swift in Sources */,
