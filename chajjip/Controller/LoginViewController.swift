@@ -13,6 +13,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    //임시 로그인 유저 정보
+    let dummyUser = User(name: "Jaoson Park", email: "abcde@gmail.com", password: "12345", age: 22, sex: true, phoneNumber: "010-1234-5678")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,5 +31,6 @@ class LoginViewController: UIViewController {
         UserDefaults.standard.set(idTextField.text, forKey: "id")
         navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
+        UserManager.shared.saveUserInfo(model: dummyUser)
     }
 }
