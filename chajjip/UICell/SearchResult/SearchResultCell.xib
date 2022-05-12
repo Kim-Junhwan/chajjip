@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="146" id="KGk-i7-Jjw" customClass="SearchResultCell" customModule="chajjip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="413" height="146"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touristEx" translatesAutoresizingMaskIntoConstraints="NO" id="F08-6W-vn7">
+                        <rect key="frame" x="0.0" y="0.0" width="413" height="146"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="413" id="FYT-z5-3aO"/>
+                            <constraint firstAttribute="height" constant="146" id="svL-RP-9o3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지/가게이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNh-vS-S2Z">
+                        <rect key="frame" x="111" y="55" width="191" height="36"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="F08-6W-vn7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0FN-N9-147"/>
+                    <constraint firstItem="F08-6W-vn7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8FE-R7-r5h"/>
+                    <constraint firstItem="aNh-vS-S2Z" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="9oR-Mn-iGl"/>
+                    <constraint firstAttribute="bottom" secondItem="F08-6W-vn7" secondAttribute="bottom" id="gn1-Hx-syO"/>
+                    <constraint firstItem="aNh-vS-S2Z" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hai-7Z-cMs"/>
+                    <constraint firstAttribute="trailing" secondItem="F08-6W-vn7" secondAttribute="trailing" id="oa8-7v-25L"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="resultImage" destination="F08-6W-vn7" id="ZwQ-BB-AIl"/>
+                <outlet property="resultLabel" destination="aNh-vS-S2Z" id="tHm-NN-CUr"/>
+            </connections>
+            <point key="canvasLocation" x="197.82608695652175" y="91.071428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="touristEx" width="587.5" height="384"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
