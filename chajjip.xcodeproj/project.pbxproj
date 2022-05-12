@@ -70,6 +70,13 @@
 		C7DFE712282C0A2400E6DC25 /* MyReviewImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFE711282C0A2400E6DC25 /* MyReviewImageController.swift */; };
 		C7DFE716282C26E100E6DC25 /* MyReviewImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFE714282C26E100E6DC25 /* MyReviewImageCollectionViewCell.swift */; };
 		C7DFE717282C26E100E6DC25 /* MyReviewImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DFE715282C26E100E6DC25 /* MyReviewImageCollectionViewCell.xib */; };
+		C7DFE719282C972700E6DC25 /* ShopReviewResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFE718282C972700E6DC25 /* ShopReviewResModel.swift */; };
+		C7DFE71B282CDFF400E6DC25 /* ShopReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFE71A282CDFF400E6DC25 /* ShopReviewManager.swift */; };
+		C7DFE71D282CE62600E6DC25 /* ShopReviewListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFE71C282CE62600E6DC25 /* ShopReviewListViewModel.swift */; };
+		C7DFE721282D049900E6DC25 /* ShopImageReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFE71F282D049900E6DC25 /* ShopImageReviewTableViewCell.swift */; };
+		C7DFE722282D049900E6DC25 /* ShopImageReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DFE720282D049900E6DC25 /* ShopImageReviewTableViewCell.xib */; };
+		C7DFE726282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFE724282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.swift */; };
+		C7DFE727282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DFE725282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,6 +148,13 @@
 		C7DFE711282C0A2400E6DC25 /* MyReviewImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviewImageController.swift; sourceTree = "<group>"; };
 		C7DFE714282C26E100E6DC25 /* MyReviewImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviewImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7DFE715282C26E100E6DC25 /* MyReviewImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyReviewImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		C7DFE718282C972700E6DC25 /* ShopReviewResModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopReviewResModel.swift; sourceTree = "<group>"; };
+		C7DFE71A282CDFF400E6DC25 /* ShopReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopReviewManager.swift; sourceTree = "<group>"; };
+		C7DFE71C282CE62600E6DC25 /* ShopReviewListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopReviewListViewModel.swift; sourceTree = "<group>"; };
+		C7DFE71F282D049900E6DC25 /* ShopImageReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopImageReviewTableViewCell.swift; sourceTree = "<group>"; };
+		C7DFE720282D049900E6DC25 /* ShopImageReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopImageReviewTableViewCell.xib; sourceTree = "<group>"; };
+		C7DFE724282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopnonImageReviewTableViewCell.swift; sourceTree = "<group>"; };
+		C7DFE725282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopnonImageReviewTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +195,7 @@
 				C700303C2823AA1100352544 /* UserManager.swift */,
 				C70030462824397F00352544 /* SearchManager.swift */,
 				C76CC777282B690A0091CA11 /* MyReviewManager.swift */,
+				C7DFE71A282CDFF400E6DC25 /* ShopReviewManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -193,6 +208,7 @@
 				C70030502824C65900352544 /* SearchResModel.swift */,
 				C76CC775282AAFA00091CA11 /* MyReviewModel.swift */,
 				C76CC779282B7B9A0091CA11 /* Shop.swift */,
+				C7DFE718282C972700E6DC25 /* ShopReviewResModel.swift */,
 			);
 			path = ResponseModel;
 			sourceTree = "<group>";
@@ -339,6 +355,7 @@
 				C700304A2824433A00352544 /* SearchResultViewModel.swift */,
 				C700304C2824435C00352544 /* RecommendViewModel.swift */,
 				C700304E2824437400352544 /* MyReviewListViewModel.swift */,
+				C7DFE71C282CE62600E6DC25 /* ShopReviewListViewModel.swift */,
 				C70030522824FBA700352544 /* SearchViewModel.swift */,
 				C76CC76E2829312E0091CA11 /* PedoMeterViewModel.swift */,
 			);
@@ -359,6 +376,8 @@
 		C7D1EB872801A8A600A9E747 /* UICell */ = {
 			isa = PBXGroup;
 			children = (
+				C7DFE723282D09CA00E6DC25 /* ShopnonImageReviewTableViewCell */,
+				C7DFE71E282D045100E6DC25 /* ShopImageReviewTableViewCell */,
 				C7DFE713282C26B700E6DC25 /* MyReviewImageCollectionViewCell */,
 				C700308128281F5B00352544 /* addReviewImage */,
 				C700307C2828054100352544 /* WriteReviewImage */,
@@ -404,6 +423,24 @@
 				C7DFE715282C26E100E6DC25 /* MyReviewImageCollectionViewCell.xib */,
 			);
 			path = MyReviewImageCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		C7DFE71E282D045100E6DC25 /* ShopImageReviewTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C7DFE71F282D049900E6DC25 /* ShopImageReviewTableViewCell.swift */,
+				C7DFE720282D049900E6DC25 /* ShopImageReviewTableViewCell.xib */,
+			);
+			path = ShopImageReviewTableViewCell;
+			sourceTree = "<group>";
+		};
+		C7DFE723282D09CA00E6DC25 /* ShopnonImageReviewTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C7DFE724282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.swift */,
+				C7DFE725282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.xib */,
+			);
+			path = ShopnonImageReviewTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,8 +505,10 @@
 			files = (
 				C7DFE70C282BD6B700E6DC25 /* MynonImageReviewTableViewCell.xib in Resources */,
 				C700307A282792B500352544 /* Launch Screen.storyboard in Resources */,
+				C7DFE722282D049900E6DC25 /* ShopImageReviewTableViewCell.xib in Resources */,
 				C7D1EB9728033C1800A9E747 /* RecommendListTableViewCell.xib in Resources */,
 				C784873F27F6CE5700920591 /* Assets.xcassets in Resources */,
+				C7DFE727282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.xib in Resources */,
 				C7D1EB8B2801A8E300A9E747 /* MyImageReviewTableViewCell.xib in Resources */,
 				C784875227F6CE5700920591 /* SearchResultCell.xib in Resources */,
 				C7DFE717282C26E100E6DC25 /* MyReviewImageCollectionViewCell.xib in Resources */,
@@ -530,6 +569,7 @@
 				C7D1EB862800A07200A9E747 /* WriteReview.swift in Sources */,
 				C784874B27F6CE5700920591 /* User.swift in Sources */,
 				C76CC778282B690A0091CA11 /* MyReviewManager.swift in Sources */,
+				C7DFE71D282CE62600E6DC25 /* ShopReviewListViewModel.swift in Sources */,
 				C76CC77A282B7B9A0091CA11 /* Shop.swift in Sources */,
 				C70030752826188500352544 /* CustomSideMenuNavigation.swift in Sources */,
 				C784874D27F6CE5700920591 /* WeatherData.swift in Sources */,
@@ -538,6 +578,7 @@
 				C784875327F6CE5700920591 /* AppDelegate.swift in Sources */,
 				C7D1EB8A2801A8E300A9E747 /* MyImageReviewTableViewCell.swift in Sources */,
 				C7DFE70B282BD6B700E6DC25 /* MynonImageReviewTableViewCell.swift in Sources */,
+				C7DFE726282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.swift in Sources */,
 				C700304F2824437400352544 /* MyReviewListViewModel.swift in Sources */,
 				C700303D2823AA1100352544 /* UserManager.swift in Sources */,
 				C7D1EB9628033C1800A9E747 /* RecommendListTableViewCell.swift in Sources */,
@@ -569,6 +610,7 @@
 				C76CC771282931DF0091CA11 /* PedoMeterManager.swift in Sources */,
 				C784875527F6CE5700920591 /* SceneDelegate.swift in Sources */,
 				C784874827F6CE5700920591 /* TabBarViewController.swift in Sources */,
+				C7DFE719282C972700E6DC25 /* ShopReviewResModel.swift in Sources */,
 				C7D1EB1E27FDF7DD00A9E747 /* RatingController.swift in Sources */,
 				C784874E27F6CE5700920591 /* WeatherModel.swift in Sources */,
 				C70030532824FBA700352544 /* SearchViewModel.swift in Sources */,
@@ -579,6 +621,8 @@
 				C70030512824C65900352544 /* SearchResModel.swift in Sources */,
 				C784874127F6CE5700920591 /* SearchResultTableViewController.swift in Sources */,
 				C70030412823AFAF00352544 /* RegisterResModel.swift in Sources */,
+				C7DFE71B282CDFF400E6DC25 /* ShopReviewManager.swift in Sources */,
+				C7DFE721282D049900E6DC25 /* ShopImageReviewTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
