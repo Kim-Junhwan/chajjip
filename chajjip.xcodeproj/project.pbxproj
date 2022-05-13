@@ -77,6 +77,7 @@
 		C7DFE722282D049900E6DC25 /* ShopImageReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DFE720282D049900E6DC25 /* ShopImageReviewTableViewCell.xib */; };
 		C7DFE726282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFE724282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.swift */; };
 		C7DFE727282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DFE725282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.xib */; };
+		C7DFE729282E153B00E6DC25 /* RecommencShopManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFE728282E153B00E6DC25 /* RecommencShopManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +156,7 @@
 		C7DFE720282D049900E6DC25 /* ShopImageReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopImageReviewTableViewCell.xib; sourceTree = "<group>"; };
 		C7DFE724282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopnonImageReviewTableViewCell.swift; sourceTree = "<group>"; };
 		C7DFE725282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopnonImageReviewTableViewCell.xib; sourceTree = "<group>"; };
+		C7DFE728282E153B00E6DC25 /* RecommencShopManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommencShopManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				C70030462824397F00352544 /* SearchManager.swift */,
 				C76CC777282B690A0091CA11 /* MyReviewManager.swift */,
 				C7DFE71A282CDFF400E6DC25 /* ShopReviewManager.swift */,
+				C7DFE728282E153B00E6DC25 /* RecommencShopManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				C784874527F6CE5700920591 /* SideMenuViewController.swift in Sources */,
 				C700304B2824433A00352544 /* SearchResultViewModel.swift in Sources */,
 				C784874427F6CE5700920591 /* MyReviewViewController.swift in Sources */,
+				C7DFE729282E153B00E6DC25 /* RecommencShopManager.swift in Sources */,
 				C7D1EB832800834C00A9E747 /* WriteReviewViewModel.swift in Sources */,
 				C700304D2824435C00352544 /* RecommendViewModel.swift in Sources */,
 				C700303F2823AC0000352544 /* RegisterReqModel.swift in Sources */,

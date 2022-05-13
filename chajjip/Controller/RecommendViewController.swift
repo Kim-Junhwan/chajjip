@@ -13,11 +13,19 @@ class RecommendViewController: UIViewController {
     
     @IBOutlet weak var naverMapView: NMFMapView!
     
+    var recommendManager = RecommendShopManager()
+    var recommendVM : RecommendViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("call bottom sheet")
-        print("")
-        showBottomSheetList()
+        setUp()
+    }
+    
+    func setUp(){
+        recommendManager.getRecommendShop { data in
+            self.recommendVM = RecommendViewModel(shopList: data)
+            self.showBottomSheetList()
+        }
     }
     
     
@@ -26,7 +34,7 @@ class RecommendViewController: UIViewController {
     }
     
     func showCurrentLocation(){
-        //naverMapView.positionMode = .direction
+        naverMapView.positionMode = .direction
     }
     
     
@@ -38,9 +46,8 @@ class RecommendViewController: UIViewController {
             sheet.detents = [.medium(), .large()]
             sheet.largestUndimmedDetentIdentifier = .medium
         }
-        
         detailViewController.navigationItem.title = "추천"
-        
+        detailViewController.getShopList(model: recommendVM)
         present(nav, animated: true, completion: nil)
     }
     
