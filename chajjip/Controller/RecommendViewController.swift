@@ -21,6 +21,7 @@ class RecommendViewController: UIViewController {
         setUp()
     }
     
+    //뷰 로드시 현재 위치 기반으로 검색
     func setUp(){
         recommendManager.getRecommendShop { data in
             self.recommendVM = RecommendViewModel(shopList: data)
@@ -58,16 +59,4 @@ class RecommendViewController: UIViewController {
         imageView.image = image
         controller.navigationItem.titleView = imageView
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

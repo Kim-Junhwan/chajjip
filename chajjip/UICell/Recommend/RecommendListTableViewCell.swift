@@ -9,9 +9,13 @@ import UIKit
 
 class RecommendListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var shopImageView: UIImageView!
+    @IBOutlet weak var shopNameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        addressLabel.adjustsFontSizeToFitWidth = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
