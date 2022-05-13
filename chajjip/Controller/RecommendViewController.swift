@@ -23,8 +23,15 @@ class RecommendViewController: UIViewController {
     
     //뷰 로드시 현재 위치 기반으로 검색
     func setUp(){
+        let transport = AddressToCoordinate()
         recommendManager.getRecommendShop { data in
             self.recommendVM = RecommendViewModel(shopList: data)
+            transport.addressToCoordinate(model: self.recommendVM) { result in
+                print("after transport \(result)")
+                for item in 0..<result.shopList.count{
+                    self.setMarker(lat: Double(result.shopList[item].latitude)!, lon: Double(result.shopList[item].longitude)!)
+                }
+            }
             self.showBottomSheetList()
         }
     }
@@ -32,6 +39,12 @@ class RecommendViewController: UIViewController {
     
     @IBAction func clickShowBottomSheetList(_ sender: UIButton) {
         showBottomSheetList()
+    }
+    
+    func setMarker(lat : Double, lon : Double){
+        let marker = NMFMarker()
+        marker.position = NMGLatLng(lat: lat, lng: lon)
+        marker.mapView = self.naverMapView
     }
     
     func showCurrentLocation(){

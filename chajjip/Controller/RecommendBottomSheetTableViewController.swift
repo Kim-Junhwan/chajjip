@@ -12,7 +12,6 @@ class RecommendBottomSheetTableViewController: UITableViewController {
     
     func getShopList(model : RecommendViewModel){
         self.recommendShopListVM = model
-        print("RecommendBottomSheetTableViewController : \(self.recommendShopListVM!)")
         tableView.register(UINib(nibName: "RecommendListTableViewCell", bundle: nil), forCellReuseIdentifier: "recommendCell")
     }
 

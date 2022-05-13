@@ -78,6 +78,7 @@
 		C7DFE726282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFE724282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.swift */; };
 		C7DFE727282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DFE725282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.xib */; };
 		C7DFE729282E153B00E6DC25 /* RecommencShopManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFE728282E153B00E6DC25 /* RecommencShopManager.swift */; };
+		C7DFE72B282ECA2100E6DC25 /* AddressToCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFE72A282ECA2100E6DC25 /* AddressToCoordinate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +158,7 @@
 		C7DFE724282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopnonImageReviewTableViewCell.swift; sourceTree = "<group>"; };
 		C7DFE725282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopnonImageReviewTableViewCell.xib; sourceTree = "<group>"; };
 		C7DFE728282E153B00E6DC25 /* RecommencShopManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommencShopManager.swift; sourceTree = "<group>"; };
+		C7DFE72A282ECA2100E6DC25 /* AddressToCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressToCoordinate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				C76CC777282B690A0091CA11 /* MyReviewManager.swift */,
 				C7DFE71A282CDFF400E6DC25 /* ShopReviewManager.swift */,
 				C7DFE728282E153B00E6DC25 /* RecommencShopManager.swift */,
+				C7DFE72A282ECA2100E6DC25 /* AddressToCoordinate.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				C784875327F6CE5700920591 /* AppDelegate.swift in Sources */,
 				C7D1EB8A2801A8E300A9E747 /* MyImageReviewTableViewCell.swift in Sources */,
 				C7DFE70B282BD6B700E6DC25 /* MynonImageReviewTableViewCell.swift in Sources */,
+				C7DFE72B282ECA2100E6DC25 /* AddressToCoordinate.swift in Sources */,
 				C7DFE726282D09F600E6DC25 /* ShopnonImageReviewTableViewCell.swift in Sources */,
 				C700304F2824437400352544 /* MyReviewListViewModel.swift in Sources */,
 				C700303D2823AA1100352544 /* UserManager.swift in Sources */,
