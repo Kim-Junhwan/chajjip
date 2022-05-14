@@ -114,6 +114,8 @@ extension MainPageViewController : WeatherManagerDelegate{
 
 extension MainPageViewController : CLLocationManagerDelegate{
     
+    
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
 //        let realtimeLocation : CLLocation = locations[locations.count - 1]

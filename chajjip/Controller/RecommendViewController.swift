@@ -25,12 +25,15 @@ class RecommendViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.requestAlwaysAuthorization()
+        if CLLocationManager.locationServicesEnabled(){
+            locationManager.startUpdatingLocation()
+        }
         naverMapView.positionMode = .direction
+        naverMapView.zoomLevel = 18.0
+        naverMapView.animationDuration = 1
+        searchCurrentLocation()
         setUp()
-        locationManager.delegate = self
-        locationManager.requestLocation()
-        locationManager.requestWhenInUseAuthorization()
-        
     }
     
     //뷰 로드시 현재 위치 기반으로 검색
@@ -42,9 +45,12 @@ class RecommendViewController: UIViewController {
                 print("after transport \(result)")
                 for item in 0..<result.shopList.count{
                     self.setMarker(lat: Double(result.shopList[item].latitude)!, lon: Double(result.shopList[item].longitude)!)
+                    self.recommendVM.shopList[item].longitude = result.shopList[item].longitude
+                    self.recommendVM.shopList[item].latitude = result.shopList[item].latitude
                 }
+                self.showBottomSheetList()
             }
-            self.showBottomSheetList()
+            
         }
     }
     
@@ -74,6 +80,7 @@ class RecommendViewController: UIViewController {
         }
         detailViewController.navigationItem.title = "추천"
         detailViewController.getShopList(model: recommendVM)
+        detailViewController.delegate = self
         present(nav, animated: true, completion: nil)
     }
     
@@ -87,25 +94,59 @@ class RecommendViewController: UIViewController {
     
     
     @IBAction func pressCurrentSearch(_ sender: UIButton) {
-        var coordinate = locationManager.location?.coordinate
-        searchCurrentLocation(lat: coordinate!.latitude, lon: coordinate!.longitude)
+        searchCurrentLocation()
+    }
+    
+    
+    @IBAction func setCurrentLocation(_ sender: UIButton) {
+        naverMapView.positionMode = .direction
     }
     
     //현재 위치 기준 추천 가게 검색
-    func searchCurrentLocation(lat : Double, lon : Double){
-        print("request location lat : \(lat), lon :\(lon) search")
+    func searchCurrentLocation(){
+        var coordinate = locationManager.location?.coordinate
+        print("lat: \(coordinate!.latitude), lon: \(coordinate!.longitude)")
     }
 }
 
 extension RecommendViewController : CLLocationManagerDelegate{
+    func getLocationUsagePermission(){
+        self.locationManager.requestWhenInUseAuthorization()
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = manager.location else {return}
-        let cor = location.coordinate
-        searchCurrentLocation(lat: cor.latitude, lon: cor.longitude)
+        let location : CLLocation = locations[locations.count - 1]
+        let longtitude : CLLocationDegrees = location.coordinate.longitude
+        let latitude : CLLocationDegrees = location.coordinate.latitude
+        print("naver : x:\(naverMapView.longitude), y:\(naverMapView.latitude)")
+        print("corelocation : x:\(longtitude), y:\(latitude)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .restricted, .notDetermined:
+            print("GPS권한 설정되지 않음")
+            getLocationUsagePermission()
+        case .denied:
+            print("GPS권한 요청 거부됨")
+            getLocationUsagePermission()
+        case .authorizedWhenInUse, .authorizedAlways:
+            print("GPS권한 설정됨")
+            self.locationManager.startUpdatingLocation()
+        default:
+            print("GPS:Default")
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
+    }
+}
+
+
+extension RecommendViewController : RecommendListDelegate{
+    func pressRecommendList(vm: ShopInfoViewModel) {
+        let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: Double(vm.latitude)!, lng: Double(vm.longitude)!))
+        naverMapView.moveCamera(cameraUpdate)
     }
 }

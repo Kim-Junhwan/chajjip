@@ -41,4 +41,11 @@ struct ShopInfoViewModel{
     var contact : String{
         return shop.contactNumber
     }
+    
+    var latitude : String{
+        return shop.latitude
+    }
+    var longitude : String{
+        return shop.longitude
+    }
 }

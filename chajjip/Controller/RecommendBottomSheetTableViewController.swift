@@ -7,8 +7,13 @@
 
 import UIKit
 
+protocol RecommendListDelegate{
+    func pressRecommendList(vm : ShopInfoViewModel)
+}
+
 class RecommendBottomSheetTableViewController: UITableViewController {
     var recommendShopListVM : RecommendViewModel!
+    var delegate : RecommendListDelegate?
     
     func getShopList(model : RecommendViewModel){
         self.recommendShopListVM = model
@@ -16,7 +21,7 @@ class RecommendBottomSheetTableViewController: UITableViewController {
     }
 
     override func viewDidLoad() {
-        super.viewDidLoad() 
+        super.viewDidLoad()
         print("Show Recommend table")
     }
     
@@ -35,6 +40,10 @@ class RecommendBottomSheetTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.pressRecommendList(vm: recommendShopListVM.shopAtIndex(indexPath.row))
     }
     
 }
