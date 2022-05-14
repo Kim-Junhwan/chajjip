@@ -16,9 +16,21 @@ class RecommendViewController: UIViewController {
     var recommendManager = RecommendShopManager()
     var recommendVM : RecommendViewModel!
     
+    lazy var locationManager: CLLocationManager = {
+        let manager = CLLocationManager()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        return manager
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        naverMapView.positionMode = .direction
         setUp()
+        locationManager.delegate = self
+        locationManager.requestLocation()
+        locationManager.requestWhenInUseAuthorization()
+        
     }
     
     //뷰 로드시 현재 위치 기반으로 검색
@@ -71,5 +83,29 @@ class RecommendViewController: UIViewController {
         let image = UIImage(named: "line.3.horizontal.decrease")
         imageView.image = image
         controller.navigationItem.titleView = imageView
+    }
+    
+    
+    @IBAction func pressCurrentSearch(_ sender: UIButton) {
+        var coordinate = locationManager.location?.coordinate
+        searchCurrentLocation(lat: coordinate!.latitude, lon: coordinate!.longitude)
+    }
+    
+    //현재 위치 기준 추천 가게 검색
+    func searchCurrentLocation(lat : Double, lon : Double){
+        print("request location lat : \(lat), lon :\(lon) search")
+    }
+}
+
+extension RecommendViewController : CLLocationManagerDelegate{
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = manager.location else {return}
+        let cor = location.coordinate
+        searchCurrentLocation(lat: cor.latitude, lon: cor.longitude)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
     }
 }

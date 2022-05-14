@@ -224,6 +224,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAW-tW-Zez">
+                                <rect key="frame" x="144.66666666666666" y="30" width="124.99999999999997" height="31"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="현재위치에서 검색"/>
+                                <connections>
+                                    <action selector="pressCurrentSearch:" destination="Xoy-v3-i8o" eventType="touchUpInside" id="tT1-Wx-o8Q"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jxw-mM-iGr">
                                 <rect key="frame" x="170.66666666666666" y="641" width="73" height="31"/>
                                 <state key="normal" title="Button"/>
@@ -236,8 +246,10 @@
                         <viewLayoutGuide key="safeArea" id="mEI-uv-BNU"/>
                         <color key="backgroundColor" red="0.01176470588" green="0.29411764709999999" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="UAW-tW-Zez" firstAttribute="top" secondItem="mEI-uv-BNU" secondAttribute="top" constant="30" id="B74-EO-JKT"/>
                             <constraint firstItem="1jV-Yw-IaQ" firstAttribute="bottom" secondItem="mEI-uv-BNU" secondAttribute="bottom" id="Eaa-UI-mho"/>
                             <constraint firstItem="1jV-Yw-IaQ" firstAttribute="top" secondItem="mEI-uv-BNU" secondAttribute="top" id="KOL-Mx-jGZ"/>
+                            <constraint firstItem="UAW-tW-Zez" firstAttribute="centerX" secondItem="fJC-Xy-QnT" secondAttribute="centerX" id="M2C-N9-pUn"/>
                             <constraint firstItem="1jV-Yw-IaQ" firstAttribute="trailing" secondItem="mEI-uv-BNU" secondAttribute="trailing" id="PRF-7e-O2J"/>
                             <constraint firstItem="mEI-uv-BNU" firstAttribute="bottom" secondItem="Jxw-mM-iGr" secondAttribute="bottom" constant="15" id="PoC-Mi-4oN"/>
                             <constraint firstItem="Jxw-mM-iGr" firstAttribute="centerX" secondItem="fJC-Xy-QnT" secondAttribute="centerX" id="RQE-Ea-H95"/>
@@ -245,6 +257,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="맛집" image="fork.knife" catalog="system" id="pcM-8A-WeS"/>
+                    <connections>
+                        <outlet property="naverMapView" destination="1jV-Yw-IaQ" id="qgu-fF-EkY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ur6-IR-pQW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -391,6 +406,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dme-ZE-pPN">
+                                <rect key="frame" x="144.66666666666666" y="30" width="124.99999999999997" height="31"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="현재위치에서 검색"/>
+                                <connections>
+                                    <action selector="pressCurrentSearch:" destination="Xoy-v3-i8o" eventType="touchUpInside" id="enU-Ad-4Kv"/>
+                                    <action selector="pressCurrentSearch:" destination="fTq-Wz-lby" eventType="touchUpInside" id="ojS-hT-8Pe"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOG-lg-1Ef">
                                 <rect key="frame" x="170.66666666666666" y="641" width="73" height="31"/>
                                 <state key="normal" title="Button"/>
@@ -409,6 +435,8 @@
                             <constraint firstItem="73r-gM-b05" firstAttribute="bottom" secondItem="vOG-lg-1Ef" secondAttribute="bottom" constant="15" id="E7s-qW-Fq5"/>
                             <constraint firstItem="vOG-lg-1Ef" firstAttribute="centerX" secondItem="RO6-qY-yae" secondAttribute="centerX" id="L5d-SJ-Tl5"/>
                             <constraint firstItem="Tn4-c7-ZRD" firstAttribute="top" secondItem="73r-gM-b05" secondAttribute="top" id="bxY-Tc-Pbe"/>
+                            <constraint firstItem="Dme-ZE-pPN" firstAttribute="top" secondItem="73r-gM-b05" secondAttribute="top" constant="30" id="deq-f7-FC1"/>
+                            <constraint firstItem="Dme-ZE-pPN" firstAttribute="centerX" secondItem="RO6-qY-yae" secondAttribute="centerX" id="iv7-Sh-gGj"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="관광지" image="bag" catalog="system" id="CYZ-Is-SaZ"/>
