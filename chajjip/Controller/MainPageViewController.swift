@@ -50,7 +50,8 @@ class MainPageViewController : UIViewController{
             locationManager.startUpdatingLocation()
         }
         
-        naverMapView.positionMode = .direction
+        //다녀온 여행지에 현재위치 추가할지는 고려사항
+        //naverMapView.positionMode = .direction
         pedoManager.getStepCount { result in
             self.stepCountLabel.text = String(format: "%.0f", result)
         }

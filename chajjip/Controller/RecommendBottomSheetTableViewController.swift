@@ -16,7 +16,6 @@ protocol RecommendListDelegate{
 class RecommendBottomSheetTableViewController: UITableViewController {
     var recommendShopListVM : RecommendViewModel!
     var delegate : RecommendListDelegate?
-    
     func getShopList(model : RecommendViewModel){
         self.recommendShopListVM = model
         tableView.register(UINib(nibName: "RecommendListTableViewCell", bundle: nil), forCellReuseIdentifier: "recommendCell")
@@ -37,6 +36,8 @@ class RecommendBottomSheetTableViewController: UITableViewController {
         cell.shopNameLabel.text = recommendShop.name
         cell.addressLabel.text = recommendShop.address
         cell.shopImageView.image = recommendShop.shopImage
+        cell.shop = recommendShop.shop
+        cell.delegate = self
         return cell
     }
     
@@ -59,3 +60,10 @@ class RecommendBottomSheetTableViewController: UITableViewController {
     
 }
 
+extension RecommendBottomSheetTableViewController : RecommendTableViewDelegate{
+    func showMoreInfoView(shop: Shop) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MoreInfoViewController") as! MoreInfoViewController
+        vc.shop = shop
+        present(vc, animated: true, completion: nil)
+    }
+}

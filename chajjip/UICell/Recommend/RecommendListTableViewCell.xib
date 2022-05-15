@@ -42,10 +42,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWP-PV-5kB">
+                                        <rect key="frame" x="180.5" y="10" width="72.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="상세정보"/>
+                                        <connections>
+                                            <action selector="pressMoreInfo:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="EmF-Q2-EPX"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstItem="zqN-cM-NYb" firstAttribute="leading" secondItem="vYY-6p-vmg" secondAttribute="leading" constant="10" id="GDH-Cb-agn"/>
+                                    <constraint firstAttribute="trailing" secondItem="GWP-PV-5kB" secondAttribute="trailing" constant="5" id="HDd-zN-Ey8"/>
+                                    <constraint firstItem="GWP-PV-5kB" firstAttribute="top" secondItem="vYY-6p-vmg" secondAttribute="top" constant="10" id="LBY-9f-2Fg"/>
                                     <constraint firstItem="zqN-cM-NYb" firstAttribute="top" secondItem="vYY-6p-vmg" secondAttribute="top" constant="5" id="Lyq-hc-Abj"/>
                                     <constraint firstAttribute="bottom" secondItem="6UX-bY-BeX" secondAttribute="bottom" constant="15" id="ZGC-cG-AQC"/>
                                     <constraint firstAttribute="trailing" secondItem="6UX-bY-BeX" secondAttribute="trailing" constant="5" id="vIs-GP-7a8"/>

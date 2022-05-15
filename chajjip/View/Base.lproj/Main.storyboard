@@ -495,7 +495,7 @@
         <!--상세 정보-->
         <scene sceneID="ccF-zQ-Naf">
             <objects>
-                <viewController id="rUc-TW-tiS" customClass="MoreInfoViewController" customModule="chajjip" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoreInfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rUc-TW-tiS" customClass="MoreInfoViewController" customModule="chajjip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sNC-he-ZNw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

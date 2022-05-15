@@ -31,7 +31,7 @@ class MoreInfoViewController: UIViewController {
     func setUp(){
         background.layer.cornerRadius = 50
         thumbnail.layer.cornerRadius = 50
-        print("shop \(shop)")
+        print("shop \(shop!)")
         guard let shop = shop else {return}
         shopReviewManager.getShopReivew(shop: shop) { data in
             self.shopReviewVM = ShopReviewListViewModel(shopReviewList: data)
