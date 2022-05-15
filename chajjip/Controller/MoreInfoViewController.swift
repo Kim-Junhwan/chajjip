@@ -18,7 +18,7 @@ class MoreInfoViewController: UIViewController {
     
     var shopReviewManager = ShopReviewManager()
     var shopReviewVM : ShopReviewListViewModel!
-        
+    var shop : Shop?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +31,12 @@ class MoreInfoViewController: UIViewController {
     func setUp(){
         background.layer.cornerRadius = 50
         thumbnail.layer.cornerRadius = 50
-        shopReviewManager.getShopReivew { data in
+        print("shop \(shop)")
+        guard let shop = shop else {return}
+        shopReviewManager.getShopReivew(shop: shop) { data in
             self.shopReviewVM = ShopReviewListViewModel(shopReviewList: data)
-            print(data)
+            
+            print("MoreInfoViewController at selected shop \(shop)")
             DispatchQueue.main.async {
                 self.setShopUI()
                 self.reviewTableView.reloadData()

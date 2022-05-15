@@ -8,13 +8,14 @@
 import Foundation
 import Alamofire
 
+
 class SearchManager{
     let searchRequestURL = API.search_URL
+    let dummySearchResult = DummyData.shop
     
-    func search(text : String, completion : @escaping (SearchResultViewModel) -> ()){
-        // 현 함수에서 검색된 데이터 배열 디코딩까지 완료 후 completion 실행
-        
-        
+    func search(text : String, completion : @escaping ([Shop]) -> ()){
+        // 현 함수에서 검색된 데이터 배열 받은 후 completion 실행
+            completion(dummySearchResult)
         
 //        let headers : HTTPHeaders = [
 //            .contentType("application/json; charset=UTF-8"), .accept("application/json; charset=UTF-8")

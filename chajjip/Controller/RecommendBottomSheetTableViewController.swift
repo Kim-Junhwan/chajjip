@@ -9,6 +9,7 @@ import UIKit
 
 protocol RecommendListDelegate{
     func pressRecommendList(vm : ShopInfoViewModel)
+    func closeTableView()
 }
 
 class RecommendBottomSheetTableViewController: UITableViewController {
@@ -46,4 +47,10 @@ class RecommendBottomSheetTableViewController: UITableViewController {
         delegate?.pressRecommendList(vm: recommendShopListVM.shopAtIndex(indexPath.row))
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        print("Close TableView")
+        delegate?.closeTableView()
+    }
+    
 }
+

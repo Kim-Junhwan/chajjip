@@ -7,38 +7,30 @@
 
 import UIKit
 
-protocol SearchDelegate{
-    func searchResultDidSave(vm : SearchResultViewModel)
-}
 
 class SearchViewController: UIViewController {
-
     @IBOutlet weak var searchBar: UISearchBar!
-    var delegate : SearchDelegate?
-    var searchManager = SearchManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.searchBar.delegate = self
-        // Do any additional setup after loading the view.
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is SearchResultTableViewController{
+            guard let vc = segue.destination as? SearchResultTableViewController else {return}
+            vc.text = searchBar.text!
+        }
+    }
+    
 }
 
+//여기서 검색이 아닌 검색키워드를 tableView에 넘겨준 후 SearchManager를 통해 검색
 extension SearchViewController : UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print(searchBar.text!)
         self.performSegue(withIdentifier: "searchResult", sender: nil)
-        
-//        if searchBar.text! != nil{
-//            searchManager.search(text: searchBar.text!) { vm in
-//                print("move search result page")
-//                self.delegate?.searchResultDidSave(vm: vm)
-//
-//            }
-//        }
-        
     }
 }

@@ -30,7 +30,6 @@ class RecommendViewController: UIViewController {
             locationManager.startUpdatingLocation()
         }
         naverMapView.positionMode = .direction
-        naverMapView.zoomLevel = 18.0
         naverMapView.animationDuration = 1
         searchCurrentLocation()
         setUp()
@@ -50,8 +49,8 @@ class RecommendViewController: UIViewController {
                 }
                 self.showBottomSheetList()
             }
-            
         }
+        naverMapView.positionMode = .direction
     }
     
     
@@ -71,17 +70,19 @@ class RecommendViewController: UIViewController {
     
     
     func showBottomSheetList(){
+        naverMapView.frame.origin.y = -80.0
         let detailViewController = storyboard?.instantiateViewController(withIdentifier: "recommendList") as! RecommendBottomSheetTableViewController
         let nav = UINavigationController(rootViewController: detailViewController)
         nav.modalPresentationStyle = .pageSheet
         if let sheet = nav.sheetPresentationController{
-            sheet.detents = [.medium(), .large()]
-            sheet.largestUndimmedDetentIdentifier = .medium
+            sheet.detents = [.medium(), .large() ]
+            sheet.largestUndimmedDetentIdentifier = .large
         }
         detailViewController.navigationItem.title = "추천"
         detailViewController.getShopList(model: recommendVM)
         detailViewController.delegate = self
         present(nav, animated: true, completion: nil)
+        
     }
     
     func setUpBottomSheetUI(controller : UINavigationController){
@@ -145,8 +146,15 @@ extension RecommendViewController : CLLocationManagerDelegate{
 
 
 extension RecommendViewController : RecommendListDelegate{
+    func closeTableView() {
+        DispatchQueue.main.async {
+            self.naverMapView.frame.origin.y = 0.0
+        }
+    }
+    
     func pressRecommendList(vm: ShopInfoViewModel) {
         let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: Double(vm.latitude)!, lng: Double(vm.longitude)!))
         naverMapView.moveCamera(cameraUpdate)
+        naverMapView.zoomLevel = 18.0
     }
 }

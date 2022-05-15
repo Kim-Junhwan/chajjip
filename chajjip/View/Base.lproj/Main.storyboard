@@ -429,6 +429,18 @@
                                     <action selector="pressCurrentSearch:" destination="fTq-Wz-lby" eventType="touchUpInside" id="ojS-hT-8Pe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6p-JA-h4r">
+                                <rect key="frame" x="19.999999999999996" y="614.33333333333337" width="58.666666666666657" height="42.666666666666629"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="target" catalog="system" imagePlacement="top" title="현재위치">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="14"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="setCurrentLocation:" destination="fTq-Wz-lby" eventType="touchUpInside" id="oZK-Iy-ZjH"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOG-lg-1Ef">
                                 <rect key="frame" x="170.66666666666666" y="641" width="73" height="31"/>
                                 <state key="normal" title="Button"/>
@@ -441,8 +453,10 @@
                         <viewLayoutGuide key="safeArea" id="73r-gM-b05"/>
                         <color key="backgroundColor" red="0.01176470588" green="0.29411764709999999" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="73r-gM-b05" firstAttribute="bottom" secondItem="W6p-JA-h4r" secondAttribute="bottom" constant="30" id="4Nz-eX-WVn"/>
                             <constraint firstItem="73r-gM-b05" firstAttribute="bottom" secondItem="vOG-lg-1Ef" secondAttribute="bottom" constant="15" id="E7s-qW-Fq5"/>
                             <constraint firstItem="vOG-lg-1Ef" firstAttribute="centerX" secondItem="RO6-qY-yae" secondAttribute="centerX" id="L5d-SJ-Tl5"/>
+                            <constraint firstItem="W6p-JA-h4r" firstAttribute="leading" secondItem="73r-gM-b05" secondAttribute="leading" constant="20" id="Ter-Nt-isa"/>
                             <constraint firstItem="Dme-ZE-pPN" firstAttribute="top" secondItem="73r-gM-b05" secondAttribute="top" constant="30" id="deq-f7-FC1"/>
                             <constraint firstItem="Dme-ZE-pPN" firstAttribute="centerX" secondItem="RO6-qY-yae" secondAttribute="centerX" id="iv7-Sh-gGj"/>
                         </constraints>

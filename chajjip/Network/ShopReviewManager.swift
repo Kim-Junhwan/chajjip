@@ -11,7 +11,7 @@ class ShopReviewManager{
     
     let dummyShopReview = DummyData.shopReview
     
-    func getShopReivew(completion : @escaping (ShopReviewResModel)->()){
+    func getShopReivew(shop : Shop ,completion : @escaping (ShopReviewResModel)->()){
         completion(dummyShopReview)
     }
     
