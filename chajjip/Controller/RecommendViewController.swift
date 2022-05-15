@@ -70,7 +70,6 @@ class RecommendViewController: UIViewController {
     
     
     func showBottomSheetList(){
-        naverMapView.frame.origin.y = -80.0
         let detailViewController = storyboard?.instantiateViewController(withIdentifier: "recommendList") as! RecommendBottomSheetTableViewController
         let nav = UINavigationController(rootViewController: detailViewController)
         nav.modalPresentationStyle = .pageSheet
@@ -82,8 +81,9 @@ class RecommendViewController: UIViewController {
         detailViewController.getShopList(model: recommendVM)
         detailViewController.delegate = self
         present(nav, animated: true, completion: nil)
-        
     }
+    
+    
     
     func setUpBottomSheetUI(controller : UINavigationController){
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
@@ -146,6 +146,10 @@ extension RecommendViewController : CLLocationManagerDelegate{
 
 
 extension RecommendViewController : RecommendListDelegate{
+    func showTableView() {
+        naverMapView.frame.origin.y = -80.0
+    }
+    
     func closeTableView() {
         DispatchQueue.main.async {
             self.naverMapView.frame.origin.y = 0.0
