@@ -25,6 +25,7 @@ class MainPageViewController : UIViewController{
     
     var weatherManager = WeatherManager()
     var pedoManager = PedoMeterManager()
+    var visitedShopManager = VisitedShopManager()
     var visitedShopVM : RecommendViewModel!
     
     lazy var locationManager: CLLocationManager = {
@@ -140,7 +141,40 @@ extension MainPageViewController : CLLocationManagerDelegate{
 
 extension MainPageViewController : CustomSideMenuNavigationDelegate{
     func showSideMenu() {
-        print("show SideMenu")
+        let transport = AddressToCoordinate()
+        visitedShopManager.getVisitedShopList(user: User.shared) { result in
+            self.visitedShopVM = RecommendViewModel(shopList: result)
+            transport.addressToCoordinate(model: self.visitedShopVM) { result in
+                print("after transport \(result)")
+                for item in 0..<result.shopList.count{
+                    self.setMarker(lat: Double(result.shopList[item].latitude)!, lon: Double(result.shopList[item].longitude)!)
+                    self.visitedShopVM.shopList[item].longitude = result.shopList[item].longitude
+                    self.visitedShopVM.shopList[item].latitude = result.shopList[item].latitude
+                }
+                //좌표들의 중앙값 계산후 카메라 위치 이동
+                self.getMiddleCameraLocation()
+            }
+            
+        }
+        
     }
     
+    func setMarker(lat : Double, lon : Double){
+        let marker = NMFMarker()
+        marker.position = NMGLatLng(lat: lat, lng: lon)
+        marker.mapView = self.naverMapView
+    }
+    
+    func getMiddleCameraLocation(){
+        var sumLon = 0.0
+        var sumLat = 0.0
+        for item in visitedShopVM.shopList{
+            sumLon += Double(item.longitude)!
+            sumLat += Double(item.latitude)!
+        }
+        
+        let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: sumLat / Double(visitedShopVM.shopList.count), lng: sumLon / Double(visitedShopVM.shopList.count) ))
+            naverMapView.moveCamera(cameraUpdate)
+            naverMapView.zoomLevel = 12.0
+    }
 }

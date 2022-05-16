@@ -22,9 +22,6 @@ class CustomSideMenuNavigation : SideMenuNavigationController{
         self.menuWidth = self.view.frame.width * 0.7
         let rootVC = self.viewControllers.first as? SideMenuViewController
         rootVC?.delegate = self
-//        if let navVC = storyboard?.instantiateViewController(withIdentifier: "customSideNav") as? CustomSideMenuNavigation, let rootVC = navVC.viewControllers.first as? SideMenuViewController{
-//            rootVC.delegate = self
-//        }
     }
     
     func setUpBarColor(){
