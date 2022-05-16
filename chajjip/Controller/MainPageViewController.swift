@@ -25,6 +25,7 @@ class MainPageViewController : UIViewController{
     
     var weatherManager = WeatherManager()
     var pedoManager = PedoMeterManager()
+    var visitedShopVM : RecommendViewModel!
     
     lazy var locationManager: CLLocationManager = {
         let manager = CLLocationManager()
@@ -90,10 +91,13 @@ class MainPageViewController : UIViewController{
     }
     
     @IBAction func pressedSidebarButton(_ sender: UIBarButtonItem) {
-        if !UserDefaults.standard.bool(forKey: "status"){
-            performSegue(withIdentifier: "loginSidebar", sender: nil)
-        }else{
-            performSegue(withIdentifier: "profileSidebar", sender: nil)
+            performSegue(withIdentifier: "showSideMenu", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is CustomSideMenuNavigation{
+            guard let vc = segue.destination as? CustomSideMenuNavigation else {return}
+            vc.customDelegate = self
         }
     }
 }
@@ -114,9 +118,6 @@ extension MainPageViewController : WeatherManagerDelegate{
 }
 
 extension MainPageViewController : CLLocationManagerDelegate{
-    
-    
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
 //        let realtimeLocation : CLLocation = locations[locations.count - 1]
@@ -137,3 +138,9 @@ extension MainPageViewController : CLLocationManagerDelegate{
     }
 }
 
+extension MainPageViewController : CustomSideMenuNavigationDelegate{
+    func showSideMenu() {
+        print("show SideMenu")
+    }
+    
+}

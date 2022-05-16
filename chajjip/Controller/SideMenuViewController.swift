@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SideMenuDelegate{
+    func successLogin()
+}
+
 class SideMenuViewController: UIViewController {
     
 
@@ -15,6 +19,7 @@ class SideMenuViewController: UIViewController {
     @IBOutlet weak var loginProfileLabel: UILabel!
     @IBOutlet weak var loginLogOutButton: UIButton!
     @IBOutlet weak var menuTableView: UITableView!
+    var delegate : SideMenuDelegate!
     
     let menuItem = ["공지사항","내프로필","여행지지도","식당지도"]
     
@@ -22,7 +27,6 @@ class SideMenuViewController: UIViewController {
         super.viewDidLoad()
         menuTableView.dataSource = self
         menuTableView.delegate = self
-        
         //menuTableView set separatorStyle
         setMenuTableView()
         
@@ -41,9 +45,8 @@ class SideMenuViewController: UIViewController {
     //MARK: - loginSideMenu Setting
     func logInSideMenuSetUp(){
         print("LogInSideMenu")
-        loginProfileLabel.text = "ABC님"
+        loginProfileLabel.text = "\(User.shared.name)님"
         loginLogOutButton.setImage(UIImage(named: "logOut_icon"), for: .normal)
-        
         //setTitle 적용시 font 적용이 안됨. 추후 수정
         loginLogOutButton.titleLabel?.font = UIFont(name: "ArialHebrew", size: 30.0)
         loginLogOutButton.setTitle("로그아웃", for: .normal)
@@ -64,6 +67,13 @@ class SideMenuViewController: UIViewController {
             self.dismiss(animated: true, completion: nil)
         }else{
             self.performSegue(withIdentifier: "loginPage", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is LoginViewController{
+            guard let vc = segue.destination as? LoginViewController else {return}
+            vc.delegate = self
         }
     }
     
@@ -92,4 +102,10 @@ extension SideMenuViewController : UITableViewDelegate, UITableViewDataSource{
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+}
+
+extension SideMenuViewController : LoginDelegate{
+    func sucessLogin() {
+        delegate.successLogin()
+    }
 }
