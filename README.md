@@ -32,6 +32,7 @@
 
 ## 사용 기술
 + swift
++ UIKit
 + Alamofire
 + MVVM pattern
 + Naver map api
