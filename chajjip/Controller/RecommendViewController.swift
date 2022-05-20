@@ -43,7 +43,7 @@ class RecommendViewController: UIViewController {
             transport.addressToCoordinate(model: self.recommendVM) { result in
                 print("after transport \(result)")
                 for item in 0..<result.shopList.count{
-                    self.setMarker(lat: Double(result.shopList[item].latitude)!, lon: Double(result.shopList[item].longitude)!)
+                    self.setMarker(lat: Double(result.shopList[item].latitude)!, lon: Double(result.shopList[item].longitude)!, name: result.shopList[item].name)
                     self.recommendVM.shopList[item].longitude = result.shopList[item].longitude
                     self.recommendVM.shopList[item].latitude = result.shopList[item].latitude
                 }
@@ -58,10 +58,17 @@ class RecommendViewController: UIViewController {
         showBottomSheetList()
     }
     
-    func setMarker(lat : Double, lon : Double){
-        let marker = NMFMarker()
-        marker.position = NMGLatLng(lat: lat, lng: lon)
-        marker.mapView = self.naverMapView
+    func setMarker(lat : Double, lon : Double, name : String){
+        //let marker = NMFMarker()
+        print("name \(name)")
+        let infoWindow = NMFInfoWindow()
+        let dataSource = NMFInfoWindowDefaultTextSource.data()
+        dataSource.title = name
+        infoWindow.dataSource = dataSource
+        infoWindow.position = NMGLatLng(lat: lat, lng: lon)
+        infoWindow.open(with: naverMapView)
+//        marker.position = NMGLatLng(lat: lat, lng: lon)
+//        marker.mapView = self.naverMapView
     }
     
     func showCurrentLocation(){
@@ -95,6 +102,7 @@ class RecommendViewController: UIViewController {
     
     
     @IBAction func pressCurrentSearch(_ sender: UIButton) {
+        
         searchCurrentLocation()
     }
     
@@ -107,6 +115,7 @@ class RecommendViewController: UIViewController {
     func searchCurrentLocation(){
         var coordinate = locationManager.location?.coordinate
         print("lat: \(coordinate!.latitude), lon: \(coordinate!.longitude)")
+        naverMapView.positionMode = .direction
     }
 }
 

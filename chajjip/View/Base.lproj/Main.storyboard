@@ -1498,31 +1498,6 @@
             </objects>
             <point key="canvasLocation" x="-791" y="1132"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="8Fy-vM-mbF">
-            <objects>
-                <viewController id="YlN-qa-f5q" customClass="ViewController" customModule="chajjip" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="AOY-W6-8rW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhf-DN-MSa" customClass="NMFMapView">
-                                <rect key="frame" x="41" y="124" width="322" height="528"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="PDh-31-dsJ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <connections>
-                        <outlet property="naverMapView" destination="rhf-DN-MSa" id="G1h-2s-0mR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PTC-Zb-fWh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2903" y="203"/>
-        </scene>
         <!--홈-->
         <scene sceneID="tw7-Yy-QL8">
             <objects>

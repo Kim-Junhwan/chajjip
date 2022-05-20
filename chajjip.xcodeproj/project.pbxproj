@@ -11,7 +11,6 @@
 		C700303D2823AA1100352544 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C700303C2823AA1100352544 /* UserManager.swift */; };
 		C700303F2823AC0000352544 /* RegisterReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C700303E2823AC0000352544 /* RegisterReqModel.swift */; };
 		C70030412823AFAF00352544 /* RegisterResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70030402823AFAF00352544 /* RegisterResModel.swift */; };
-		C70030432823C02A00352544 /* LoginReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70030422823C02A00352544 /* LoginReqModel.swift */; };
 		C70030472824397F00352544 /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70030462824397F00352544 /* SearchManager.swift */; };
 		C700304928243A2C00352544 /* SearchReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C700304828243A2C00352544 /* SearchReqModel.swift */; };
 		C700304B2824433A00352544 /* SearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C700304A2824433A00352544 /* SearchResultViewModel.swift */; };
@@ -32,9 +31,9 @@
 		C76CC778282B690A0091CA11 /* MyReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76CC777282B690A0091CA11 /* MyReviewManager.swift */; };
 		C76CC77A282B7B9A0091CA11 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76CC779282B7B9A0091CA11 /* Shop.swift */; };
 		C78470BE28321E21000BBDFD /* VisitedShopManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78470BD28321E21000BBDFD /* VisitedShopManager.swift */; };
+		C78470C028375C93000BBDFD /* LoginReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78470BF28375C93000BBDFD /* LoginReqModel.swift */; };
 		C784873E27F6CE5700920591 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872027F6CE5700920591 /* Constants.swift */; };
 		C784873F27F6CE5700920591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C784872127F6CE5700920591 /* Assets.xcassets */; };
-		C784874027F6CE5700920591 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872327F6CE5700920591 /* ViewController.swift */; };
 		C784874127F6CE5700920591 /* SearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872427F6CE5700920591 /* SearchResultTableViewController.swift */; };
 		C784874227F6CE5700920591 /* BarcodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872527F6CE5700920591 /* BarcodeReaderViewController.swift */; };
 		C784874327F6CE5700920591 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872627F6CE5700920591 /* SearchViewController.swift */; };
@@ -45,7 +44,6 @@
 		C784874827F6CE5700920591 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872B27F6CE5700920591 /* TabBarViewController.swift */; };
 		C784874A27F6CE5700920591 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872D27F6CE5700920591 /* RegisterViewController.swift */; };
 		C784874B27F6CE5700920591 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784872F27F6CE5700920591 /* User.swift */; };
-		C784874C27F6CE5700920591 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784873027F6CE5700920591 /* Destination.swift */; };
 		C784874D27F6CE5700920591 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784873227F6CE5700920591 /* WeatherData.swift */; };
 		C784874E27F6CE5700920591 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784873327F6CE5700920591 /* WeatherModel.swift */; };
 		C784874F27F6CE5700920591 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784873427F6CE5700920591 /* WeatherManager.swift */; };
@@ -56,7 +54,6 @@
 		C784875527F6CE5700920591 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784873D27F6CE5700920591 /* SceneDelegate.swift */; };
 		C7AB3A8C27FADC5800EA8EA5 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AB3A8B27FADC5800EA8EA5 /* DummyData.swift */; };
 		C7D1EB1E27FDF7DD00A9E747 /* RatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1EB1D27FDF7DD00A9E747 /* RatingController.swift */; };
-		C7D1EB2027FDFC0900A9E747 /* NewReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1EB1F27FDFC0900A9E747 /* NewReview.swift */; };
 		C7D1EB832800834C00A9E747 /* WriteReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1EB822800834C00A9E747 /* WriteReviewViewModel.swift */; };
 		C7D1EB862800A07200A9E747 /* WriteReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1EB852800A07200A9E747 /* WriteReview.swift */; };
 		C7D1EB8A2801A8E300A9E747 /* MyImageReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1EB882801A8E300A9E747 /* MyImageReviewTableViewCell.swift */; };
@@ -89,7 +86,6 @@
 		C700303C2823AA1100352544 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		C700303E2823AC0000352544 /* RegisterReqModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterReqModel.swift; sourceTree = "<group>"; };
 		C70030402823AFAF00352544 /* RegisterResModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResModel.swift; sourceTree = "<group>"; };
-		C70030422823C02A00352544 /* LoginReqModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReqModel.swift; sourceTree = "<group>"; };
 		C70030462824397F00352544 /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
 		C700304828243A2C00352544 /* SearchReqModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchReqModel.swift; sourceTree = "<group>"; };
 		C700304A2824433A00352544 /* SearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewModel.swift; sourceTree = "<group>"; };
@@ -111,10 +107,10 @@
 		C76CC777282B690A0091CA11 /* MyReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviewManager.swift; sourceTree = "<group>"; };
 		C76CC779282B7B9A0091CA11 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		C78470BD28321E21000BBDFD /* VisitedShopManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitedShopManager.swift; sourceTree = "<group>"; };
+		C78470BF28375C93000BBDFD /* LoginReqModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReqModel.swift; sourceTree = "<group>"; };
 		C78486F527F6CB4300920591 /* chajjip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chajjip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C784872027F6CE5700920591 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C784872127F6CE5700920591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C784872327F6CE5700920591 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C784872427F6CE5700920591 /* SearchResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewController.swift; sourceTree = "<group>"; };
 		C784872527F6CE5700920591 /* BarcodeReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeReaderViewController.swift; sourceTree = "<group>"; };
 		C784872627F6CE5700920591 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +121,6 @@
 		C784872B27F6CE5700920591 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C784872D27F6CE5700920591 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C784872F27F6CE5700920591 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		C784873027F6CE5700920591 /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		C784873227F6CE5700920591 /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		C784873327F6CE5700920591 /* WeatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		C784873427F6CE5700920591 /* WeatherManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
@@ -137,7 +132,6 @@
 		C784873D27F6CE5700920591 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C7AB3A8B27FADC5800EA8EA5 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		C7D1EB1D27FDF7DD00A9E747 /* RatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingController.swift; sourceTree = "<group>"; };
-		C7D1EB1F27FDFC0900A9E747 /* NewReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReview.swift; sourceTree = "<group>"; };
 		C7D1EB822800834C00A9E747 /* WriteReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewViewModel.swift; sourceTree = "<group>"; };
 		C7D1EB852800A07200A9E747 /* WriteReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReview.swift; sourceTree = "<group>"; };
 		C7D1EB882801A8E300A9E747 /* MyImageReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImageReviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -290,7 +284,6 @@
 				C7D1EB1C27FDF7AE00A9E747 /* Utilities */,
 				C70030742826188500352544 /* CustomSideMenuNavigation.swift */,
 				C784872827F6CE5700920591 /* SideMenuViewController.swift */,
-				C784872327F6CE5700920591 /* ViewController.swift */,
 				C784872427F6CE5700920591 /* SearchResultTableViewController.swift */,
 				C784872527F6CE5700920591 /* BarcodeReaderViewController.swift */,
 				C784872627F6CE5700920591 /* SearchViewController.swift */,
@@ -313,8 +306,6 @@
 				C700303B28236CB600352544 /* ResponseModel */,
 				C7D1EB842800A05F00A9E747 /* RequestModel */,
 				C784873127F6CE5700920591 /* Weather */,
-				C784873027F6CE5700920591 /* Destination.swift */,
-				C7D1EB1F27FDFC0900A9E747 /* NewReview.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -376,8 +367,8 @@
 			children = (
 				C7D1EB852800A07200A9E747 /* WriteReview.swift */,
 				C700303E2823AC0000352544 /* RegisterReqModel.swift */,
-				C70030422823C02A00352544 /* LoginReqModel.swift */,
 				C700304828243A2C00352544 /* SearchReqModel.swift */,
+				C78470BF28375C93000BBDFD /* LoginReqModel.swift */,
 			);
 			path = RequestModel;
 			sourceTree = "<group>";
@@ -594,15 +585,13 @@
 				C7D1EB9628033C1800A9E747 /* RecommendListTableViewCell.swift in Sources */,
 				C784874F27F6CE5700920591 /* WeatherManager.swift in Sources */,
 				C784874727F6CE5700920591 /* LoginViewController.swift in Sources */,
+				C78470C028375C93000BBDFD /* LoginReqModel.swift in Sources */,
 				C784874627F6CE5700920591 /* MainPageViewController.swift in Sources */,
-				C7D1EB2027FDFC0900A9E747 /* NewReview.swift in Sources */,
 				C76CC76F2829312E0091CA11 /* PedoMeterViewModel.swift in Sources */,
 				C784874327F6CE5700920591 /* SearchViewController.swift in Sources */,
 				C784874A27F6CE5700920591 /* RegisterViewController.swift in Sources */,
-				C784874027F6CE5700920591 /* ViewController.swift in Sources */,
 				C70030472824397F00352544 /* SearchManager.swift in Sources */,
 				C76CC776282AAFA00091CA11 /* MyReviewModel.swift in Sources */,
-				C784874C27F6CE5700920591 /* Destination.swift in Sources */,
 				C784873E27F6CE5700920591 /* Constants.swift in Sources */,
 				C7DFE70E282BE2E000E6DC25 /* MyReviewRatingController.swift in Sources */,
 				C7D1EB8E2801EBBA00A9E747 /* RecommendViewController.swift in Sources */,
@@ -615,7 +604,6 @@
 				C700304D2824435C00352544 /* RecommendViewModel.swift in Sources */,
 				C700303F2823AC0000352544 /* RegisterReqModel.swift in Sources */,
 				C7AB3A8C27FADC5800EA8EA5 /* DummyData.swift in Sources */,
-				C70030432823C02A00352544 /* LoginReqModel.swift in Sources */,
 				C700304928243A2C00352544 /* SearchReqModel.swift in Sources */,
 				C7D1EB902801EC8D00A9E747 /* RecommendBottomSheetTableViewController.swift in Sources */,
 				C76CC771282931DF0091CA11 /* PedoMeterManager.swift in Sources */,
