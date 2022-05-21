@@ -30,6 +30,9 @@
 + QR리드기화면, 리뷰작성화면, my리뷰화면
 <img src = "https://user-images.githubusercontent.com/58679737/168645247-f3130189-bd1a-4ad7-9c98-561715bed71e.png" width="700" height="400"/>
 
+<a href = "https://youtu.be/yvfi9hZ3N4U"> 실행영상(유투브 링크) </a>
+
+
 ## 사용 기술
 + swift
 + UIKit
