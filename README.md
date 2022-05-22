@@ -36,8 +36,15 @@
 ## 사용 기술
 + swift
 + UIKit
-+ Alamofire
 + MVVM pattern
-+ Naver map api
-+ Naver GeoCode
 + Figma
+
+## 사용 라이브러리
++ Alamofire
++ Naver GeoCode
++ Naver map api
++ BSImagePicker
++ MaterialComponents/BottomSheet
++ SideMenu
++ IQKeyboardManagerSwift
++ QRCodeReader.swift
